@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#SBATCH --time=4:00:00
+#SBATCH --mem=4G
+#SBATCH --gres=gpu:1
+#SBATCH --constraint=kepler|pascal
+# SBATCH --nodelist=ivb20
+
+
+srun theanolm score /scratch/work/psmit/chars-fin-2017/am/data/lm/morfessor_f2_a0.001_tokens_aff/rescore/word+proj500+lstm1500+htanh1500x4+dropout0.2+softmax_e13.5_t468.h5 /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/split_100_best/x0 --output-file split_100_best_results/psmit_lm_scores_0.txt --output utterance-scores

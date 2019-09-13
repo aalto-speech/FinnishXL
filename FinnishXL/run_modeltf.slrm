@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#SBATCH --time=4-20:00:00
+#SBATCH --mem=50G
+#SBATCH --gres=gpu:1
+#SBATCH --constraint=volta
+
+srun bash run_Ktrain_tf.sh train --work_dir=/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/

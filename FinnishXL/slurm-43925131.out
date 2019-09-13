@@ -1,0 +1,15 @@
+Run training...
+Experiment dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190729-152614
+Loading cached dataset...
+Traceback (most recent call last):
+  File "train_kiel_train.py", line 184, in <module>
+    corpus = get_lm_corpus(args.data, args.dataset)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data_utils.py", line 326, in get_lm_corpus
+    corpus = torch.load(fn)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/serialization.py", line 367, in load
+    return _load(f, map_location, pickle_module)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/serialization.py", line 538, in _load
+    result = unpickler.load()
+ModuleNotFoundError: No module named 'data_utils_1'
+srun: error: gpu34: task 0: Exited with exit code 1
+srun: Terminating job step 43925131.0
