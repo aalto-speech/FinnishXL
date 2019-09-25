@@ -33,7 +33,7 @@ parser.add_argument('--clamp_len', type=int, default=-1,
                     help='max positional embedding index')
 parser.add_argument('--cuda', action='store_true',
                     help='use CUDA')
-parser.add_argument('--work_dir', type=str, default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190904-130419',
+parser.add_argument('--work_dir', type=str, default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190918-172714',
                     help='path to the work_dir')
 parser.add_argument('--no_log', action='store_true',
                     help='do not log the eval result')
@@ -51,8 +51,8 @@ device = torch.device("cuda")
 # Load dataset
 all_ids=[]
 space_counter=0
-nf= open("data/cp_kiel_train3/test_10best.txt",'w')
-with open('yle_nbest_10', "r", encoding="utf-8") as reader:
+nf= open("data/cp_kiel_train3/test_1000best.txt",'w')
+with open('yle_nbest_1000', "r", encoding="utf-8") as reader:
     while True:
         line = reader.readline()
         if not line:
@@ -99,9 +99,9 @@ if args.same_length:
 #             line = line.strip()
 #             tokens.append([line])
 #     return tokens
-re=open("rescore_96layer_10_grad.txt",'w')
+re=open("rescore_96layer_1000_20190918-172714.txt",'w')
 def rescore():
-    encoded_sent=corpus.vocab.encode_file(path='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/cp_kiel_train3/test_10best.txt',add_double_eos=True)
+    encoded_sent=corpus.vocab.encode_file(path='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/cp_kiel_train3/test_1000best.txt',add_double_eos=True)
     for idx,sent in enumerate(encoded_sent):
         streams = [None] * 1
         bptt=len(list(sent))-1

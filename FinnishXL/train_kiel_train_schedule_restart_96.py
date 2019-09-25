@@ -372,7 +372,7 @@ if args.restart:
     else:
         print('Optimizer was not saved. Start from scratch.')
 if args.restart:
-    global train_step
+    
     if os.path.exists(os.path.join(args.restart_dir, 'scheduler.pt')):
         with open(os.path.join(args.restart_dir, 'scheduler.pt'), 'rb') as f:
             sch_state_dict = torch.load(f)
@@ -380,11 +380,12 @@ if args.restart:
     else:
         print('Scheduler was not saved. Start from scratch.')
 
-    if os.path.exists(os.path.join(args.restart_dir, 'trainstep.pt')):
-        with open(os.path.join(args.restart_dir, 'trainstep.pt'), 'rb') as f:
-            train_step = torch.load(f)
-    else:
-        print('trainstep was not saved. Start from scratch.')
+    # if os.path.exists(os.path.join(args.restart_dir, 'trainstep.pt')):
+    #     global train_step
+    #     with open(os.path.join(args.restart_dir, 'trainstep.pt'), 'rb') as f:
+    #         train_step = torch.load(f)
+    # else:
+    #     print('trainstep was not saved. Start from scratch.')
 
 logging('=' * 100)
 for k, v in args.__dict__.items():
@@ -432,7 +433,7 @@ def evaluate(eval_iter):
 
 def train():
     # Turn on training mode which enables dropout.
-    global  train_loss, best_val_loss, eval_start_time, log_start_time
+    global  train_step, train_loss, best_val_loss, eval_start_time, log_start_time
     model.train()
     if args.batch_chunk > 1:
         mems = [tuple() for _ in range(args.batch_chunk)]
@@ -544,7 +545,7 @@ def train():
             break
 
 # Loop over epochs.
-train_step = 0
+train_step = 156800
 train_loss = 0
 best_val_loss = None
 
