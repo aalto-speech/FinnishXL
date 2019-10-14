@@ -1,0 +1,4 @@
+Run training...
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 46326867 ON gpu9 CANCELLED AT 2019-10-14T14:02:22 ***
+slurmstepd: error: *** STEP 46326867.0 ON gpu9 CANCELLED AT 2019-10-14T14:02:22 ***

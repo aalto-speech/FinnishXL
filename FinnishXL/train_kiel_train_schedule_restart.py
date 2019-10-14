@@ -432,7 +432,10 @@ def evaluate(eval_iter):
 
 def train():
     # Turn on training mode which enables dropout.
-    global  train_loss, best_val_loss, eval_start_time, log_start_time
+    if args.restart:
+        global train_loss, best_val_loss, eval_start_time, log_start_time
+    else:
+        global  train_step,train_loss, best_val_loss, eval_start_time, log_start_time
     model.train()
     if args.batch_chunk > 1:
         mems = [tuple() for _ in range(args.batch_chunk)]
@@ -544,7 +547,8 @@ def train():
             break
 
 # Loop over epochs.
-train_step = 0
+if not args.restart:
+    train_step = 0
 train_loss = 0
 best_val_loss = None
 

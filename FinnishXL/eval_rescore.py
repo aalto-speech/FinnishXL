@@ -52,7 +52,8 @@ device = torch.device("cuda")
 all_ids=[]
 space_counter=0
 nf= open("data/cp_kiel_train3/test_1000best.txt",'w')
-with open('yle_nbest_1000', "r", encoding="utf-8") as reader:
+#with open('lstm_nbest_100', "r", encoding="utf-8") as reader:
+with open('/m/triton/scratch/elec/puhe/p/jaina5/decode1150_yle-dev-new_morfessor_f2_a0.001_tokens_aff_rnn_interp_word+proj500+lstm1500+htanh1500x4+dropout0.2+softmax_e10.5_t365_i0.3_1000best/text', "r", encoding="utf-8") as reader:
     while True:
         line = reader.readline()
         if not line:
@@ -99,7 +100,7 @@ if args.same_length:
 #             line = line.strip()
 #             tokens.append([line])
 #     return tokens
-re=open("rescore_96layer_1000_20190918-172714.txt",'w')
+re=open("rescore_96layer_1000nbest_lstm_20190918-172714.txt",'w')
 def rescore():
     encoded_sent=corpus.vocab.encode_file(path='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/cp_kiel_train3/test_1000best.txt',add_double_eos=True)
     for idx,sent in enumerate(encoded_sent):

@@ -5,4 +5,4 @@
 #SBATCH --gres=gpu:1
 #SBATCH --constraint=volta
 
-srun bash run_Ktrain_large_layers_mem_150_96_32.sh train --work_dir=/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/
+srun bash run_Ktrain_large_layers_96mem32chunked.sh train --work_dir=/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/

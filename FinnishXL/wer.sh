@@ -1,5 +1,5 @@
 set -eu
-for file in /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/rescore2/*; do
+for file in /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/rescore3/*; do
     base=$(basename $file); echo $base
     for weight in $(seq 4 15); do
         result_file=rescore/hypoth_final_trxl_aff_"$base"_"$weight".txt

@@ -1,0 +1,11 @@
+Run training...
+Traceback (most recent call last):
+  File "train_kiel_train_schedule_restart.py", line 156, in <module>
+    scripts_to_save=['train.py', 'mem_transformer.py'], debug=args.debug)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/utils/exp_utils.py", line 25, in create_exp_dir
+    os.makedirs(dir_path)
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/os.py", line 221, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20191007-135739'
+srun: error: gpu37: task 0: Exited with exit code 1
+srun: Terminating job step 45781606.0
