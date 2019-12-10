@@ -23,7 +23,7 @@ if [[ $1 == 'train' ]]; then
         --batch_size 512 \
         --batch_chunk 4 \
         --restart \
-        --restart_dir /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20191007-145532 \
+        --restart_dir /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20191014-150446 \
         ${@:2}
 elif [[ $1 == 'eval' ]]; then
     echo 'Run evaluation...'

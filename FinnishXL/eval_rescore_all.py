@@ -73,8 +73,9 @@ ntokens = len(corpus.vocab)
 # model_dirs=['20190810-202326','20190809-180349','20190729-225418','20190804-082026','20190812-114939','20190812-114939','20190812-125743',
 # '20190806-212523','20190806-110744','20190812-115633','20190802-171559','20190730-144052','20190815-205709']
 #model_dirs=['20190816-112952','20190816-130551','20190818-175221','20190819-120901','20190820-122300','20190821-142959']
-test_dirs=['20190726-150431','20190726-172009']
-model_dirs=['20190923-123237','20190918-172714','20190902-153055','20190902-152754','20190902-154837']
+#test_dirs=['20190726-150431','20190726-172009']
+#model_dirs=['20190923-123237','20190918-172714','20190902-153055','20190902-152754','20190902-154837']
+model_dirs=['20191119-133110','20191112-102012','20191105-144751','20191105-144617','20191022-134318','20191022-132640','20191014-151746','20191014-151403']
 for model_dir in model_dirs:
     # Load the best saved model.
     with open(os.path.join(args.work_dir+model_dir+'/', 'model.pt'), 'rb') as f:
@@ -104,7 +105,7 @@ for model_dir in model_dirs:
     #             line = line.strip()
     #             tokens.append([line])
     #     return tokens
-    re=open("rescore3/rescore_50_"+model_dir,'w')
+    re=open("rescore4/rescore_50_"+model_dir,'w')
     def rescore():
         encoded_sent=corpus.vocab.encode_file(path='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/cp_kiel_train3/test_tr_50_nbest.txt',add_double_eos=True)
         for idx,sent in enumerate(encoded_sent):

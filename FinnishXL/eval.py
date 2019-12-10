@@ -11,12 +11,12 @@ from mem_transformer import MemTransformerLM
 from utils.exp_utils import get_logger
 
 parser = argparse.ArgumentParser(description='PyTorch Transformer Language Model')
-parser.add_argument('--data', type=str, default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/cp_kiel_train3/',
+parser.add_argument('--data', type=str, default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_data/',
                     help='location of the data corpus')
 parser.add_argument('--dataset', type=str, default='Ktrain',
                     choices=['wt103', 'lm1b', 'enwik8', 'text8','Ktrain'],
                     help='dataset name')
-parser.add_argument('--split', type=str, default='all',
+parser.add_argument('--split', type=str, default='test',
                     choices=['all', 'valid', 'test'],
                     help='which split to evaluate')
 parser.add_argument('--batch_size', type=int, default=10,
@@ -31,7 +31,7 @@ parser.add_argument('--clamp_len', type=int, default=-1,
                     help='max positional embedding index')
 parser.add_argument('--cuda', action='store_true',
                     help='use CUDA')
-parser.add_argument('--work_dir', type=str, default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190726-172009/',
+parser.add_argument('--work_dir', type=str, default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190918-172714/',
                     help='path to the work_dir')
 parser.add_argument('--no_log', action='store_true',
                     help='do not log the eval result')
@@ -54,69 +54,69 @@ va_iter = corpus.get_iterator('valid', args.batch_size, args.tgt_len,
     device=device, ext_len=args.ext_len)
 te_iter = corpus.get_iterator('test', args.batch_size, args.tgt_len,
     device=device, ext_len=args.ext_len)
-
+for model_dir in model_dirs:
 # Load the best saved model.
-with open(os.path.join(args.work_dir, 'model.pt'), 'rb') as f:
-    model = torch.load(f)
-model.backward_compatible()
-model = model.to(device)
+    with open(os.path.join(args.work_dir, 'model.pt'), 'rb') as f:
+        model = torch.load(f)
+    model.backward_compatible()
+    model = model.to(device)
 
-logging('Evaluating with bsz {} tgt_len {} ext_len {} mem_len {} clamp_len {}'.format(
-       args.batch_size, args.tgt_len, args.ext_len, args.mem_len, args.clamp_len))
+    logging('Evaluating with bsz {} tgt_len {} ext_len {} mem_len {} clamp_len {}'.format(
+        args.batch_size, args.tgt_len, args.ext_len, args.mem_len, args.clamp_len))
 
-model.reset_length(args.tgt_len, args.ext_len, args.mem_len)
-if args.clamp_len > 0:
-    model.clamp_len = args.clamp_len
-if args.same_length:
-    model.same_length = True
+    model.reset_length(args.tgt_len, args.ext_len, args.mem_len)
+    if args.clamp_len > 0:
+        model.clamp_len = args.clamp_len
+    if args.same_length:
+        model.same_length = True
 
-###############################################################################
-# Evaluation code
-###############################################################################
-def evaluate(eval_iter):
-    # Turn on evaluation mode which disables dropout.
-    model.eval()
-    total_len, total_loss = 0, 0.
-    start_time = time.time()
-    with torch.no_grad():
-        mems = tuple()
-        for idx, (data, target, seq_len) in enumerate(eval_iter):
-            ret = model(data, target, *mems)
-            loss, mems = ret[0], ret[1:]
-            loss = loss.mean()
-            total_loss += seq_len * loss.item()
-            total_len += seq_len
-        total_time = time.time() - start_time
-    logging('Time : {:.2f}s, {:.2f}ms/segment'.format(
-            total_time, 1000 * total_time / (idx+1)))
-    return total_loss / total_len
+    ###############################################################################
+    # Evaluation code
+    ###############################################################################
+    def evaluate(eval_iter):
+        # Turn on evaluation mode which disables dropout.
+        model.eval()
+        total_len, total_loss = 0, 0.
+        start_time = time.time()
+        with torch.no_grad():
+            mems = tuple()
+            for idx, (data, target, seq_len) in enumerate(eval_iter):
+                ret = model(data, target, *mems)
+                loss, mems = ret[0], ret[1:]
+                loss = loss.mean()
+                total_loss += seq_len * loss.item()
+                total_len += seq_len
+            total_time = time.time() - start_time
+        logging('Time : {:.2f}s, {:.2f}ms/segment'.format(
+                total_time, 1000 * total_time / (idx+1)))
+        return total_loss / total_len
 
-# Run on test data.
-if args.split == 'all':
-    test_loss = evaluate(te_iter)
-    valid_loss = evaluate(va_iter)
-elif args.split == 'valid':
-    valid_loss = evaluate(va_iter)
-    test_loss = None
-elif args.split == 'test':
-    test_loss = evaluate(te_iter)
-    valid_loss = None
+    # Run on test data.
+    if args.split == 'all':
+        test_loss = evaluate(te_iter)
+        valid_loss = evaluate(va_iter)
+    elif args.split == 'valid':
+        valid_loss = evaluate(va_iter)
+        test_loss = None
+    elif args.split == 'test':
+        test_loss = evaluate(te_iter)
+        valid_loss = None
 
-def format_log(loss, split):
-    if args.dataset in ['enwik8', 'text8']:
-        log_str = '| {0} loss {1:5.2f} | {0} bpc {2:9.5f} '.format(
-            split, loss, loss / math.log(2))
-    else:
-        log_str = '| {0} loss {1:5.2f} | {0} ppl {2:9.3f} '.format(
-            split, loss, math.exp(loss))
-    return log_str
+    def format_log(loss, split):
+        if args.dataset in ['enwik8', 'text8']:
+            log_str = '| {0} loss {1:5.2f} | {0} bpc {2:9.5f} '.format(
+                split, loss, loss / math.log(2))
+        else:
+            log_str = '| {0} loss {1:5.2f} | {0} ppl {2:9.3f} '.format(
+                split, loss, math.exp(loss))
+        return log_str
 
-log_str = ''
-if valid_loss is not None:
-    log_str += format_log(valid_loss, 'valid')
-if test_loss is not None:
-    log_str += format_log(test_loss, 'test')
+    log_str = ''
+    if valid_loss is not None:
+        log_str += format_log(valid_loss, 'valid')
+    if test_loss is not None:
+        log_str += format_log(test_loss, 'test')
 
-logging('=' * 100)
-logging(log_str)
-logging('=' * 100)
+    logging('=' * 100)
+    logging(log_str)
+    logging('=' * 100)

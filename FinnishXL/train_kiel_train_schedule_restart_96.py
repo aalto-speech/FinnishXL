@@ -10,7 +10,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-
+#from logger import Logger
 from data_utils import get_lm_corpus
 from mem_transformer import MemTransformerLM
 from utils.exp_utils import create_exp_dir
@@ -154,7 +154,7 @@ args.work_dir = '{}-{}'.format(args.work_dir, args.dataset)
 args.work_dir = os.path.join(args.work_dir, time.strftime('%Y%m%d-%H%M%S'))
 logging = create_exp_dir(args.work_dir,
     scripts_to_save=['train.py', 'mem_transformer.py'], debug=args.debug)
-
+#logger = Logger(os.path.join(args.work_dir,'logs'))
 # Set the random seed manually for reproducibility.
 np.random.seed(args.seed)
 torch.manual_seed(args.seed)
@@ -506,6 +506,11 @@ def train():
             logging(log_str)
             train_loss = 0
             log_start_time = time.time()
+        
+            # for tag, value in model.named_parameters():
+            #     tag = tag.replace('.', '/')
+            #     logger.histo_summary(tag, value.data.cpu().numpy(), train_step)
+            #     logger.histo_summary(tag+'/grad', value.grad.data.cpu().numpy(), train_step)
 
         if train_step % args.eval_interval == 0:
             val_loss = evaluate(va_iter)
@@ -545,7 +550,7 @@ def train():
             break
 
 # Loop over epochs.
-train_step = 156800
+train_step = 0
 train_loss = 0
 best_val_loss = None
 

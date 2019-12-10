@@ -2,7 +2,7 @@
 
 if [[ $1 == 'train' ]]; then
     echo 'Run training...'
-    python train_kiel_train_schedule_restart.py \
+    python train_kiel_train_schedule_restart_96.py \
         --cuda \
         --data /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_data/ \
         --dataset Ktrain \
