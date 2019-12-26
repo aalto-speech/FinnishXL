@@ -1,0 +1,47 @@
+/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'torch.nn.modules.container.ModuleList' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'torch.nn.modules.container.ParameterList' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/serialization.py:434: SourceChangeWarning: source code of class 'torch.nn.modules.activation.ReLU' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Loading cached dataset...
+Traceback (most recent call last):
+  File "eval_yle_2907.py", line 96, in <module>
+    rescore(tokens,all_ids)
+  File "eval_yle_2907.py", line 80, in rescore
+    loss=evaluate(tmp_iter)
+  File "eval_yle_2907.py", line 62, in evaluate
+    ret = model(data, target, *mems)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 745, in forward
+    hidden, new_mems = self._forward(data, mems=mems)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 677, in _forward
+    self.r_r_bias, dec_attn_mask=dec_attn_mask, mems=mems_i)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 428, in forward
+    output = self.pos_ff(output)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 62, in forward
+    core_out = self.CoreNet(inp)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/activation.py", line 50, in forward
+    return F.threshold(input, self.threshold, self.value, self.inplace)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 535, in __getattr__
+    type(self).__name__, name))
+AttributeError: 'ReLU' object has no attribute 'threshold'
+srun: error: gpu35: task 0: Exited with exit code 1
+srun: Terminating job step 43924122.0

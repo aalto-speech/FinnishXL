@@ -1,0 +1,102 @@
+Run training...
+Experiment dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190812-114821
+Loading cached dataset...
+====================================================================================================
+    - data : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_train/
+    - dataset : Ktrain
+    - n_layer : 26
+    - n_head : 8
+    - d_head : 80
+    - d_embed : 1024
+    - d_model : 1024
+    - d_inner : 4096
+    - dropout : 0.05
+    - dropatt : 0.05
+    - init : normal
+    - emb_init : normal
+    - init_range : 0.1
+    - emb_init_range : 0.01
+    - init_std : 0.02
+    - proj_init_std : 0.01
+    - optim : adam
+    - lr : 0.00025
+    - mom : 0.0
+    - scheduler : cosine
+    - warmup_step : 80000
+    - decay_rate : 0.5
+    - lr_min : 0.0
+    - clip : 0.25
+    - clip_nonemb : False
+    - max_step : 1200000
+    - batch_size : 512
+    - batch_chunk : 1
+    - tgt_len : 32
+    - eval_tgt_len : 32
+    - ext_len : 0
+    - mem_len : 32
+    - not_tied : False
+    - seed : 1111
+    - cuda : True
+    - adaptive : False
+    - div_val : 1
+    - pre_lnorm : False
+    - varlen : False
+    - multi_gpu : False
+    - log_interval : 200
+    - eval_interval : 4000
+    - work_dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190812-114821
+    - restart : False
+    - restart_dir : 
+    - debug : False
+    - same_length : False
+    - attn_type : 0
+    - clamp_len : -1
+    - eta_min : 0.0
+    - gpu0_bsz : -1
+    - max_eval_steps : -1
+    - sample_softmax : -1
+    - patience : 0
+    - finetune_v2 : False
+    - finetune_v3 : False
+    - fp16 : False
+    - static_loss_scale : 1
+    - dynamic_loss_scale : False
+    - tied : True
+    - n_token : 34519
+    - n_all_param : 338923479
+    - n_nonemb_param : 303540224
+====================================================================================================
+#params = 338923479
+#non emb params = 303540224
+Traceback (most recent call last):
+  File "train_kiel_train.py", line 539, in <module>
+    train()
+  File "train_kiel_train.py", line 445, in train
+    ret = para_model(data, target, *mems)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 745, in forward
+    hidden, new_mems = self._forward(data, mems=mems)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 677, in _forward
+    self.r_r_bias, dec_attn_mask=dec_attn_mask, mems=mems_i)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 428, in forward
+    output = self.pos_ff(output)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 62, in forward
+    core_out = self.CoreNet(inp)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/functional.py", line 749, in dropout
+    else _VF.dropout(input, p, training))
+RuntimeError: CUDA out of memory. Tried to allocate 256.00 MiB (GPU 0; 31.72 GiB total capacity; 30.58 GiB already allocated; 13.56 MiB free; 1003.50 KiB cached)
+srun: error: gpu33: task 0: Exited with exit code 1
+srun: Terminating job step 44189369.0

@@ -1,0 +1,169 @@
+Run training...
+Experiment dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20191225-121455
+Loading cached dataset...
+====================================================================================================
+    - data : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_data/
+    - dataset : Ktrain
+    - n_layer : 72
+    - n_head : 8
+    - d_head : 40
+    - d_embed : 256
+    - d_model : 256
+    - d_inner : 1024
+    - dropout : 0.05
+    - dropatt : 0.05
+    - init : normal
+    - emb_init : normal
+    - init_range : 0.1
+    - emb_init_range : 0.01
+    - init_std : 0.02
+    - proj_init_std : 0.01
+    - optim : adam
+    - lr : 0.00025
+    - mom : 0.0
+    - scheduler : cosine
+    - warmup_step : 0
+    - decay_rate : 0.5
+    - lr_min : 0.0
+    - clip : 0.25
+    - clip_nonemb : False
+    - max_step : 1200000
+    - batch_size : 512
+    - batch_chunk : 4
+    - tgt_len : 32
+    - eval_tgt_len : 32
+    - ext_len : 0
+    - mem_len : 0
+    - not_tied : False
+    - seed : 1111
+    - cuda : True
+    - adaptive : False
+    - div_val : 1
+    - pre_lnorm : False
+    - varlen : False
+    - multi_gpu : False
+    - log_interval : 200
+    - eval_interval : 4000
+    - work_dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20191225-121455
+    - restart : True
+    - restart_dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20191112-103726
+    - debug : False
+    - same_length : False
+    - attn_type : 0
+    - clamp_len : -1
+    - eta_min : 0.0
+    - gpu0_bsz : -1
+    - max_eval_steps : -1
+    - sample_softmax : -1
+    - patience : 0
+    - finetune_v2 : False
+    - finetune_v3 : False
+    - fp16 : False
+    - static_loss_scale : 1
+    - dynamic_loss_scale : False
+    - tied : True
+    - n_token : 34519
+    - n_all_param : 76277847
+    - n_nonemb_param : 67405824
+====================================================================================================
+#params = 76277847
+#non emb params = 67405824
+| epoch   1 step  1184200 |    200 batches | lr 1.07e-07 | ms/batch 2040.11 | loss  3.68 | ppl    39.538
+| epoch   1 step  1184400 |    400 batches | lr 1.05e-07 | ms/batch 2039.60 | loss  3.68 | ppl    39.700
+| epoch   1 step  1184600 |    600 batches | lr 1.02e-07 | ms/batch 2039.87 | loss  3.68 | ppl    39.771
+| epoch   1 step  1184800 |    800 batches | lr 9.92e-08 | ms/batch 2038.91 | loss  3.68 | ppl    39.608
+| epoch   1 step  1185000 |   1000 batches | lr 9.66e-08 | ms/batch 2040.62 | loss  3.68 | ppl    39.805
+| epoch   1 step  1185200 |   1200 batches | lr 9.41e-08 | ms/batch 2039.39 | loss  3.68 | ppl    39.586
+| epoch   1 step  1185400 |   1400 batches | lr 9.15e-08 | ms/batch 2039.81 | loss  3.68 | ppl    39.756
+| epoch   1 step  1185600 |   1600 batches | lr 8.91e-08 | ms/batch 2042.82 | loss  3.69 | ppl    39.880
+| epoch   1 step  1185800 |   1800 batches | lr 8.66e-08 | ms/batch 2040.53 | loss  3.69 | ppl    39.888
+| epoch   1 step  1186000 |   2000 batches | lr 8.42e-08 | ms/batch 2039.10 | loss  3.68 | ppl    39.839
+| epoch   1 step  1186200 |   2200 batches | lr 8.18e-08 | ms/batch 2041.10 | loss  3.68 | ppl    39.647
+| epoch   1 step  1186400 |   2400 batches | lr 7.94e-08 | ms/batch 2039.84 | loss  3.69 | ppl    39.867
+| epoch   1 step  1186600 |   2600 batches | lr 7.71e-08 | ms/batch 2039.64 | loss  3.69 | ppl    39.988
+| epoch   1 step  1186800 |   2800 batches | lr 7.48e-08 | ms/batch 2039.42 | loss  3.69 | ppl    39.852
+| epoch   1 step  1187000 |   3000 batches | lr 7.26e-08 | ms/batch 2041.03 | loss  3.68 | ppl    39.692
+| epoch   1 step  1187200 |   3200 batches | lr 7.04e-08 | ms/batch 2039.30 | loss  3.69 | ppl    39.913
+| epoch   1 step  1187400 |   3400 batches | lr 6.82e-08 | ms/batch 2040.05 | loss  3.69 | ppl    39.987
+| epoch   1 step  1187600 |   3600 batches | lr 6.6e-08 | ms/batch 2041.18 | loss  3.68 | ppl    39.687
+| epoch   1 step  1187800 |   3800 batches | lr 6.39e-08 | ms/batch 2041.72 | loss  3.68 | ppl    39.806
+| epoch   1 step  1188000 |   4000 batches | lr 6.18e-08 | ms/batch 2039.71 | loss  3.68 | ppl    39.721
+----------------------------------------------------------------------------------------------------
+| Eval 297 at step  1188000 | time: 8671.36s | valid loss  4.78 | valid ppl   118.675
+----------------------------------------------------------------------------------------------------
+| epoch   1 step  1188200 |   4200 batches | lr 5.98e-08 | ms/batch 4247.58 | loss  5.09 | ppl   163.140
+| epoch   1 step  1188400 |   4400 batches | lr 5.78e-08 | ms/batch 1687.58 | loss  5.05 | ppl   155.835
+| epoch   1 step  1188600 |   4600 batches | lr 5.58e-08 | ms/batch 1684.14 | loss  5.02 | ppl   150.827
+| epoch   1 step  1188800 |   4800 batches | lr 5.39e-08 | ms/batch 1685.29 | loss  4.98 | ppl   145.955
+| epoch   1 step  1189000 |   5000 batches | lr 5.2e-08 | ms/batch 1684.47 | loss  4.95 | ppl   141.528
+| epoch   1 step  1189200 |   5200 batches | lr 5.01e-08 | ms/batch 1681.19 | loss  4.93 | ppl   138.904
+| epoch   1 step  1189400 |   5400 batches | lr 4.83e-08 | ms/batch 1682.09 | loss  4.92 | ppl   137.384
+| epoch   1 step  1189600 |   5600 batches | lr 4.65e-08 | ms/batch 1682.08 | loss  4.91 | ppl   135.364
+| epoch   1 step  1189800 |   5800 batches | lr 4.47e-08 | ms/batch 1682.38 | loss  4.89 | ppl   133.497
+| epoch   1 step  1190000 |   6000 batches | lr 4.3e-08 | ms/batch 1681.73 | loss  4.89 | ppl   132.850
+| epoch   1 step  1190200 |   6200 batches | lr 4.13e-08 | ms/batch 1680.82 | loss  4.88 | ppl   131.199
+| epoch   1 step  1190400 |   6400 batches | lr 3.96e-08 | ms/batch 1683.65 | loss  4.87 | ppl   129.762
+| epoch   1 step  1190600 |   6600 batches | lr 3.8e-08 | ms/batch 1680.94 | loss  4.86 | ppl   129.160
+| epoch   1 step  1190800 |   6800 batches | lr 3.64e-08 | ms/batch 1681.05 | loss  4.86 | ppl   128.493
+| epoch   1 step  1191000 |   7000 batches | lr 3.48e-08 | ms/batch 1680.63 | loss  4.85 | ppl   127.110
+| epoch   1 step  1191200 |   7200 batches | lr 3.33e-08 | ms/batch 1680.88 | loss  4.84 | ppl   126.333
+| epoch   1 step  1191400 |   7400 batches | lr 3.18e-08 | ms/batch 1681.01 | loss  4.84 | ppl   125.925
+| epoch   1 step  1191600 |   7600 batches | lr 3.03e-08 | ms/batch 1680.77 | loss  4.83 | ppl   125.673
+| epoch   1 step  1191800 |   7800 batches | lr 2.89e-08 | ms/batch 1683.55 | loss  4.83 | ppl   125.223
+| epoch   1 step  1192000 |   8000 batches | lr 2.75e-08 | ms/batch 1678.90 | loss  4.82 | ppl   124.306
+----------------------------------------------------------------------------------------------------
+| Eval 298 at step  1192000 | time: 7238.17s | valid loss  4.59 | valid ppl    98.772
+----------------------------------------------------------------------------------------------------
+| epoch   1 step  1192200 |   8200 batches | lr 2.61e-08 | ms/batch 4223.74 | loss  4.82 | ppl   123.932
+| epoch   1 step  1192400 |   8400 batches | lr 2.48e-08 | ms/batch 1681.97 | loss  4.82 | ppl   123.558
+| epoch   1 step  1192600 |   8600 batches | lr 2.35e-08 | ms/batch 1679.54 | loss  4.82 | ppl   123.437
+| epoch   1 step  1192800 |   8800 batches | lr 2.23e-08 | ms/batch 1679.76 | loss  4.80 | ppl   121.860
+| epoch   1 step  1193000 |   9000 batches | lr 2.1e-08 | ms/batch 1679.08 | loss  4.81 | ppl   122.302
+| epoch   1 step  1193200 |   9200 batches | lr 1.99e-08 | ms/batch 1678.13 | loss  4.81 | ppl   122.734
+| epoch   1 step  1193400 |   9400 batches | lr 1.87e-08 | ms/batch 1679.07 | loss  4.81 | ppl   122.343
+| epoch   1 step  1193600 |   9600 batches | lr 1.76e-08 | ms/batch 1679.83 | loss  4.80 | ppl   121.763
+| epoch   1 step  1193800 |   9800 batches | lr 1.65e-08 | ms/batch 1678.72 | loss  4.81 | ppl   122.613
+| epoch   1 step  1194000 |  10000 batches | lr 1.55e-08 | ms/batch 1678.08 | loss  4.80 | ppl   121.046
+| epoch   1 step  1194200 |  10200 batches | lr 1.44e-08 | ms/batch 1676.92 | loss  4.80 | ppl   121.091
+| epoch   1 step  1194400 |  10400 batches | lr 1.35e-08 | ms/batch 1674.29 | loss  4.80 | ppl   120.974
+| epoch   1 step  1194600 |  10600 batches | lr 1.25e-08 | ms/batch 1673.88 | loss  4.79 | ppl   120.673
+/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/torch/serialization.py:454: SourceChangeWarning: source code of class 'mem_transformer.MemTransformerLM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+| epoch   1 step  1194800 |  10800 batches | lr 1.16e-08 | ms/batch 1675.17 | loss  4.80 | ppl   121.002
+| epoch   1 step  1195000 |  11000 batches | lr 1.07e-08 | ms/batch 1674.33 | loss  4.80 | ppl   121.390
+| epoch   1 step  1195200 |  11200 batches | lr 9.9e-09 | ms/batch 1674.37 | loss  4.79 | ppl   120.434
+| epoch   1 step  1195400 |  11400 batches | lr 9.09e-09 | ms/batch 1674.41 | loss  4.80 | ppl   121.142
+| epoch   1 step  1195600 |  11600 batches | lr 8.32e-09 | ms/batch 1674.84 | loss  4.79 | ppl   119.994
+| epoch   1 step  1195800 |  11800 batches | lr 7.58e-09 | ms/batch 1674.14 | loss  4.79 | ppl   120.409
+| epoch   1 step  1196000 |  12000 batches | lr 6.87e-09 | ms/batch 1674.23 | loss  4.79 | ppl   120.468
+----------------------------------------------------------------------------------------------------
+| Eval 299 at step  1196000 | time: 7198.27s | valid loss  4.58 | valid ppl    97.945
+----------------------------------------------------------------------------------------------------
+| epoch   1 step  1196200 |  12200 batches | lr 6.2e-09 | ms/batch 4133.02 | loss  4.80 | ppl   121.122
+| epoch   1 step  1196400 |  12400 batches | lr 5.57e-09 | ms/batch 1674.45 | loss  4.80 | ppl   121.054
+| epoch   1 step  1196600 |  12600 batches | lr 4.97e-09 | ms/batch 1674.30 | loss  4.79 | ppl   119.904
+| epoch   1 step  1196800 |  12800 batches | lr 4.4e-09 | ms/batch 1674.11 | loss  4.79 | ppl   120.697
+| epoch   1 step  1197000 |  13000 batches | lr 3.87e-09 | ms/batch 1673.25 | loss  4.79 | ppl   119.799
+| epoch   1 step  1197200 |  13200 batches | lr 3.37e-09 | ms/batch 1674.64 | loss  4.79 | ppl   119.711
+| epoch   1 step  1197400 |  13400 batches | lr 2.9e-09 | ms/batch 1674.06 | loss  4.79 | ppl   120.295
+| epoch   1 step  1197600 |  13600 batches | lr 2.47e-09 | ms/batch 1674.50 | loss  4.79 | ppl   120.547
+| epoch   1 step  1197800 |  13800 batches | lr 2.08e-09 | ms/batch 1676.55 | loss  4.78 | ppl   119.674
+| epoch   1 step  1198000 |  14000 batches | lr 1.72e-09 | ms/batch 1674.60 | loss  4.79 | ppl   120.252
+| epoch   1 step  1198200 |  14200 batches | lr 1.39e-09 | ms/batch 1674.09 | loss  4.79 | ppl   120.083
+| epoch   1 step  1198400 |  14400 batches | lr 1.1e-09 | ms/batch 1677.28 | loss  4.79 | ppl   120.803
+| epoch   1 step  1198600 |  14600 batches | lr 8.42e-10 | ms/batch 1674.01 | loss  4.79 | ppl   120.791
+| epoch   1 step  1198800 |  14800 batches | lr 6.19e-10 | ms/batch 1677.19 | loss  4.79 | ppl   120.160
+| epoch   1 step  1199000 |  15000 batches | lr 4.3e-10 | ms/batch 1673.98 | loss  4.79 | ppl   120.420
+| epoch   2 step  1199200 |     85 batches | lr 2.75e-10 | ms/batch 1669.77 | loss  4.78 | ppl   119.654
+| epoch   2 step  1199400 |    285 batches | lr 1.55e-10 | ms/batch 1647.09 | loss  4.79 | ppl   120.030
+| epoch   2 step  1199600 |    485 batches | lr 6.87e-11 | ms/batch 1645.80 | loss  4.79 | ppl   119.934
+| epoch   2 step  1199800 |    685 batches | lr 1.72e-11 | ms/batch 1646.04 | loss  4.79 | ppl   120.229
+| epoch   2 step  1200000 |    885 batches | lr 0 | ms/batch 1646.64 | loss  4.79 | ppl   119.934
+----------------------------------------------------------------------------------------------------
+| Eval 300 at step  1200000 | time: 7168.04s | valid loss  4.58 | valid ppl    97.956
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+End of training
+====================================================================================================
+| End of training | test loss  4.94 | test ppl   139.611
+====================================================================================================

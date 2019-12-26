@@ -1,0 +1,9 @@
+Run training...
+Traceback (most recent call last):
+  File "train_kiel_train_schedule_restart_96.py", line 13, in <module>
+    from logger import Logger
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/logger.py", line 4, in <module>
+    import scipy.misc 
+ModuleNotFoundError: No module named 'scipy'
+srun: error: gpu29: task 0: Exited with exit code 1
+srun: Terminating job step 47477076.0

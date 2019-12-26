@@ -1,0 +1,84 @@
+Run training...
+Experiment dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190729-232208
+Loading cached dataset...
+====================================================================================================
+    - data : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_train/
+    - dataset : Ktrain
+    - n_layer : 48
+    - n_head : 8
+    - d_head : 64
+    - d_embed : 512
+    - d_model : 512
+    - d_inner : 2048
+    - dropout : 0.05
+    - dropatt : 0.05
+    - init : normal
+    - emb_init : normal
+    - init_range : 0.1
+    - emb_init_range : 0.01
+    - init_std : 0.02
+    - proj_init_std : 0.01
+    - optim : adam
+    - lr : 0.00025
+    - mom : 0.0
+    - scheduler : cosine
+    - warmup_step : 30000
+    - decay_rate : 0.5
+    - lr_min : 0.0
+    - clip : 0.25
+    - clip_nonemb : False
+    - max_step : 1200000
+    - batch_size : 512
+    - batch_chunk : 1
+    - tgt_len : 32
+    - eval_tgt_len : 32
+    - ext_len : 0
+    - mem_len : 32
+    - not_tied : False
+    - seed : 1111
+    - cuda : True
+    - adaptive : False
+    - div_val : 1
+    - pre_lnorm : False
+    - varlen : False
+    - multi_gpu : False
+    - log_interval : 200
+    - eval_interval : 4000
+    - work_dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190729-232208
+    - restart : False
+    - restart_dir : 
+    - debug : False
+    - same_length : False
+    - attn_type : 2
+    - clamp_len : -1
+    - eta_min : 0.0
+    - gpu0_bsz : -1
+    - max_eval_steps : -1
+    - sample_softmax : -1
+    - patience : 0
+    - finetune_v2 : False
+    - finetune_v3 : False
+    - fp16 : False
+    - static_loss_scale : 1
+    - dynamic_loss_scale : False
+    - tied : True
+    - n_token : 34519
+    - n_all_param : 168924375
+    - n_nonemb_param : 151216128
+====================================================================================================
+#params = 168924375
+#non emb params = 151216128
+Traceback (most recent call last):
+  File "train_kiel_train.py", line 539, in <module>
+    train()
+  File "train_kiel_train.py", line 445, in train
+    ret = para_model(data, target, *mems)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 745, in forward
+    hidden, new_mems = self._forward(data, mems=mems)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 706, in _forward
+    mems_i += pos_emb[:mlen]
+RuntimeError: The size of tensor a (0) must match the size of tensor b (512) at non-singleton dimension 2
+srun: error: gpu32: task 0: Exited with exit code 1
+srun: Terminating job step 43933847.0

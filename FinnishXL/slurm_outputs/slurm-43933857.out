@@ -1,0 +1,98 @@
+Run training...
+Experiment dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190729-233513
+Loading cached dataset...
+====================================================================================================
+    - data : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_train/
+    - dataset : Ktrain
+    - n_layer : 24
+    - n_head : 8
+    - d_head : 64
+    - d_embed : 512
+    - d_model : 512
+    - d_inner : 2048
+    - dropout : 0.1
+    - dropatt : 0.0
+    - init : normal
+    - emb_init : normal
+    - init_range : 0.1
+    - emb_init_range : 0.01
+    - init_std : 0.02
+    - proj_init_std : 0.01
+    - optim : adam
+    - lr : 0.00025
+    - mom : 0.0
+    - scheduler : cosine
+    - warmup_step : 10000
+    - decay_rate : 0.5
+    - lr_min : 0.0
+    - clip : 0.25
+    - clip_nonemb : False
+    - max_step : 500000
+    - batch_size : 512
+    - batch_chunk : 1
+    - tgt_len : 150
+    - eval_tgt_len : 150
+    - ext_len : 0
+    - mem_len : 0
+    - not_tied : False
+    - seed : 1111
+    - cuda : True
+    - adaptive : False
+    - div_val : 1
+    - pre_lnorm : False
+    - varlen : False
+    - multi_gpu : False
+    - log_interval : 200
+    - eval_interval : 4000
+    - work_dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190729-233513
+    - restart : False
+    - restart_dir : 
+    - debug : False
+    - same_length : False
+    - attn_type : 2
+    - clamp_len : -1
+    - eta_min : 0.0
+    - gpu0_bsz : -1
+    - max_eval_steps : -1
+    - sample_softmax : -1
+    - patience : 0
+    - finetune_v2 : False
+    - finetune_v3 : False
+    - fp16 : False
+    - static_loss_scale : 1
+    - dynamic_loss_scale : False
+    - tied : True
+    - n_token : 34519
+    - n_all_param : 93316311
+    - n_nonemb_param : 75608064
+====================================================================================================
+#params = 93316311
+#non emb params = 75608064
+Traceback (most recent call last):
+  File "train_kiel_train.py", line 539, in <module>
+    train()
+  File "train_kiel_train.py", line 445, in train
+    ret = para_model(data, target, *mems)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 745, in forward
+    hidden, new_mems = self._forward(data, mems=mems)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 708, in _forward
+    mems=mems_i)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 389, in forward
+    mems=mems)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 106, in forward
+    head_k, head_v = torch.chunk(self.kv_net(c), 2, -1)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/linear.py", line 67, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/functional.py", line 1354, in linear
+    output = input.matmul(weight.t())
+RuntimeError: CUDA out of memory. Tried to allocate 300.00 MiB (GPU 0; 31.72 GiB total capacity; 30.24 GiB already allocated; 273.56 MiB free; 199.68 MiB cached)
+srun: error: gpu32: task 0: Exited with exit code 1
+srun: Terminating job step 43933857.0

@@ -1,0 +1,49 @@
+Run training...
+Traceback (most recent call last):
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/imp.py", line 242, in load_module
+    return load_dynamic(name, filename, file)
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/imp.py", line 342, in load_dynamic
+    return _load(spec)
+ImportError: /lib64/libm.so.6: version `GLIBC_2.23' not found (required by /home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train_kiel_train_schedule_restart_96.py", line 13, in <module>
+    from logger import Logger
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/logger.py", line 2, in <module>
+    import tensorflow as tf
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/__init__.py", line 28, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/imp.py", line 242, in load_module
+    return load_dynamic(name, filename, file)
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/imp.py", line 342, in load_dynamic
+    return _load(spec)
+ImportError: /lib64/libm.so.6: version `GLIBC_2.23' not found (required by /home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so)
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/errors
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+srun: error: gpu29: task 0: Exited with exit code 1
+srun: Terminating job step 47497322.0

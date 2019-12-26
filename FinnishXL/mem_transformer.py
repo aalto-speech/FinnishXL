@@ -730,7 +730,7 @@ class MemTransformerLM(nn.Module):
 
         core_out = self.drop(core_out)
 
-        new_mems = self._update_mems(hids, mems, mlen, qlen)
+        new_mems = self._update_mems(hids, mems, qlen, mlen)
 
         return core_out, new_mems
 

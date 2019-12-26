@@ -1,0 +1,4 @@
+run_Ktrain_low_layers_mem64_restart.sh: line 23: unexpected EOF while looking for matching ``'
+run_Ktrain_low_layers_mem64_restart.sh: line 44: syntax error: unexpected end of file
+srun: error: gpu34: task 0: Exited with exit code 2
+srun: Terminating job step 44258122.0
