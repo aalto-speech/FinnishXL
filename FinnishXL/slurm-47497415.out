@@ -1,7 +1,0 @@
-Run training...
-  File "train_kiel_train_schedule_restart_96.py", line 500
-    epoch,  module 'tensorflow' has no attribute 'contrib', batch+1, optimizer.param_groups[0]['lr'],
-                              ^
-SyntaxError: invalid syntax
-srun: error: gpu31: task 0: Exited with exit code 1
-srun: Terminating job step 47497415.0

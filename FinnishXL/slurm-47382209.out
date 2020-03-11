@@ -1,3 +1,0 @@
-/usr/bin/bash: run_Ktrain_large_layers_72mem32chunked_restart.sh: No such file or directory
-srun: error: gpu30: task 0: Exited with exit code 127
-srun: Terminating job step 47382209.0

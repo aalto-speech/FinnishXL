@@ -22,6 +22,8 @@ if [[ $1 == 'train' ]]; then
         --eval_tgt_len 32 \
         --batch_size 512 \
         --batch_chunk 4 \
+        --restart \
+        --restart_dir /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200117-113121 \
         ${@:2}
 elif [[ $1 == 'eval' ]]; then
     echo 'Run evaluation...'

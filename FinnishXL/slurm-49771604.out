@@ -1,0 +1,18 @@
+Run training...
+Experiment dir : /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200203-164703
+Producing dataset Ktrain...
+building vocab from /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_left/vocab_train.txt
+Traceback (most recent call last):
+  File "train_kiel_train_schedule_restart.py", line 184, in <module>
+    corpus = get_lm_corpus(args.data, args.dataset)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data_utils.py", line 343, in get_lm_corpus
+    corpus = Corpus(datadir, dataset, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data_utils.py", line 273, in __init__
+    self.vocab.build_vocab()
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/utils/vocabulary.py", line 77, in build_vocab
+    self._build_from_file(self.vocab_file)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/utils/vocabulary.py", line 68, in _build_from_file
+    with open(vocab_file, 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_left/vocab_train.txt'
+srun: error: gpu28: task 0: Exited with exit code 1
+srun: Terminating job step 49771604.0
