@@ -1,12 +1,11 @@
-of = open("data/kiel_train/kielipankki.train")
-nf = open("data/kiel_train/vocab.txt",'w')
+of = open("data/fin_Data/train.txt")
+nf = open("data/fin_Data/vocab_train.txt",'w')
 
 outer_counter=0
 inner_counter=0
 lengths_ofline=[]
 vocab=[]
 for line in of:
-    if len(line)<300:
         words=line.split()
         for word in words:
             if word not in vocab:

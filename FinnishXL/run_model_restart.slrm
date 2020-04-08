@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH --time=5-00:00:00
-#SBATCH --mem=50G
+#SBATCH --mem=30G
 #SBATCH --gres=gpu:1
 #SBATCH --constraint=volta
 
-srun bash run_Ktrain_large_layers_72mem32chunked.sh train --work_dir=/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/
+srun bash run_Ktrain_baseline_transformerxl_mem32chunked_512_batch.sh train --work_dir=/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/

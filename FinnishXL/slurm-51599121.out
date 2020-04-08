@@ -1,0 +1,5 @@
+Run training...
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 51599121 ON dgx03 CANCELLED AT 2020-04-07T15:35:31 ***
+slurmstepd: error: *** STEP 51599121.0 ON dgx03 CANCELLED AT 2020-04-07T15:35:31 ***
+/usr/bin/epilog: line 3: grep: command not found

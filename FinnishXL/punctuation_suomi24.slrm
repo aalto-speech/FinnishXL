@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH --partition batch
+#SBATCH --time=6:00:00    # 6 hours
+#SBATCH --mem-per-cpu=30000    #30GB of memory
+#SBATCH -o /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/punc_suomi-%j.log
+#SBATCH -e /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/punc_suomi-%j.log
+
+IFS=$'\n'
+set -f
+i=$1
+basename "$i"
+f="$(basename -- $i)"
+sed 's/+ +[.]/ ./g; s/+ +[!]/ !/g; s/+ +[?]/ ?/g; s/+ +[,]/ ,/g ;s/+ +[&]/ &/g' $i > "$f"_cleanedpunctuation.vrt

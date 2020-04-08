@@ -1,30 +1,29 @@
 #!/bin/bash
 
-export PYTHONIOENCODING='utf-8'
 if [[ $1 == 'train' ]]; then
     echo 'Run training...'
     python train_kiel_train_schedule_restart.py \
         --cuda \
-        --data /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_data/ \
+        --data /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/fin_Data/ \
         --dataset Ktrain \
         --n_layer 72 \
-        --d_model 256 \
-        --n_head 8 \
+        --d_model 512 \
+        --n_head 16 \
         --d_head 40 \
         --d_inner 1024 \
         --dropout 0.05 \
         --dropatt 0.05 \
         --optim adam \
-        --warmup_step 0 \
+        --warmup_step 40000 \
         --max_step 1200000 \
         --lr 0.00025 \
         --tgt_len 32 \
         --mem_len 32 \
         --eval_tgt_len 32 \
         --batch_size 512 \
-        --batch_chunk 4 \
-        --restart \
-        --restart_dir /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20191112-103726 \
+        --multi_gpu \
+        --gpu0_bsz 0 \
+        --batch_chunk 2 \
         ${@:2}
 elif [[ $1 == 'eval' ]]; then
     echo 'Run evaluation...'

@@ -31,7 +31,7 @@ parser.add_argument('--clamp_len', type=int, default=-1,
                     help='max positional embedding index')
 parser.add_argument('--cuda', action='store_true',
                     help='use CUDA')
-parser.add_argument('--work_dir', type=str,default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190726-172009/',
+parser.add_argument('--work_dir', type=str,default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200123-133425/',
                     help='path to the work_dir')
 parser.add_argument('--no_log', action='store_true',
                     help='do not log the eval result')
@@ -63,7 +63,7 @@ def evaluate(eval_iter):
             total_loss += seq_len * loss.item()
             total_len += seq_len
     return total_loss/total_len
-corpus=get_lm_corpus('/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_train2/','Ktrain')
+corpus=get_lm_corpus('/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_data/','Ktrain')
 ntokens = len(corpus.vocab)
 #Load the best saved model.
 with open(os.path.join(args.work_dir, 'model.pt'), 'rb') as f:
@@ -76,7 +76,7 @@ if args.clamp_len > 0:
 if args.same_length:
     model.same_length = True
 
-te_iter = corpus.get_iterator('test', 10, 200,device=device, ext_len=args.ext_len,shuffle=False)
+te_iter = corpus.get_iterator('test', 64, 200,device=device, ext_len=args.ext_len,shuffle=False)
 te_loss=evaluate(te_iter)
 print(te_loss)
 # def rescore(batch_sentenes):
