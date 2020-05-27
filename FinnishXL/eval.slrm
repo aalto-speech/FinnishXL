@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#SBATCH --time=1-20:00:00
+#SBATCH -p dgx-common
+#SBATCH --time=20:00:00
 #SBATCH --mem=20G
 #SBATCH --gres=gpu:1
-#SBATCH --constraint=volta
 
-srun /home/jaina5/.conda/envs/TensorflowEnv/bin/python eval_rescore.py
+srun python eval_rescore_all_2.py

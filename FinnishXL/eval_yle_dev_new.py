@@ -31,7 +31,7 @@ parser.add_argument('--clamp_len', type=int, default=-1,
                     help='max positional embedding index')
 parser.add_argument('--cuda', action='store_true',
                     help='use CUDA')
-parser.add_argument('--work_dir', type=str,default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200123-133425/',
+parser.add_argument('--work_dir', type=str,default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200407-201955/',
                     help='path to the work_dir')
 parser.add_argument('--no_log', action='store_true',
                     help='do not log the eval result')
@@ -70,13 +70,13 @@ with open(os.path.join(args.work_dir, 'model.pt'), 'rb') as f:
     model = torch.load(f)
 model.backward_compatible()
 model = model.to(device)
-model.reset_length(args.tgt_len, args.ext_len, args.mem_len)
+#model.reset_length(args.tgt_len, args.ext_len, args.mem_len)
 if args.clamp_len > 0:
     model.clamp_len = args.clamp_len
 if args.same_length:
     model.same_length = True
 
-te_iter = corpus.get_iterator('test', 64, 200,device=device, ext_len=args.ext_len,shuffle=False)
+te_iter = corpus.get_iterator('test', 128, 200,device=device, ext_len=args.ext_len,shuffle=False)
 te_loss=evaluate(te_iter)
 print(te_loss)
 # def rescore(batch_sentenes):

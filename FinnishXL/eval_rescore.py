@@ -39,6 +39,8 @@ parser.add_argument('--no_log', action='store_true',
                     help='do not log the eval result')
 parser.add_argument('--same_length', action='store_true',
                     help='set same length attention with masking')
+parser.add_argument('--input_dir',type=str,help='rescore dirs')
+
 args = parser.parse_args()
 assert args.ext_len >= 0, 'extended context length must be non-negative'
 
@@ -51,9 +53,10 @@ device = torch.device("cuda")
 # Load dataset
 all_ids=[]
 space_counter=0
-nf= open("data/cp_kiel_train3/test_1000best.txt",'w')
+dir=os.path.join("/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/cp_kiel_train3", args.input_dir)
+nf= open(dir,'w')
 #with open('lstm_nbest_100', "r", encoding="utf-8") as reader:
-with open('/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/yle_nbest_1000', "r", encoding="utf-8") as reader:
+with open(args.input_dir, "r", encoding="utf-8") as reader:
     while True:
         line = reader.readline()
         if not line:
@@ -100,9 +103,9 @@ if args.same_length:
 #             line = line.strip()
 #             tokens.append([line])
 #     return tokens
-re=open("rescore_72layer_1000nbest_yle_20191119-133110.txt",'w')
+re=open(os.path.join("split_yle_test_rescore_trxl_20191119-133110",args.input_dir),'w')
 def rescore():
-    encoded_sent=corpus.vocab.encode_file(path='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/cp_kiel_train3/test_1000best.txt',add_double_eos=True)
+    encoded_sent=corpus.vocab.encode_file(path=dir,add_double_eos=True)
     for idx,sent in enumerate(encoded_sent):
         streams = [None] * 1
         bptt=len(list(sent))-1

@@ -1,0 +1,17 @@
+2020-05-10 18:18:14,125 get_default_device: Theano is not using a GPU or an old version of libgpuarray is installed.
+2020-05-10 18:18:14,181 from_file: Reading vocabulary from network state.
+2020-05-10 18:18:14,536 from_file: Number of words in vocabulary: 34521
+2020-05-10 18:18:14,536 from_file: Number of words in shortlist: 34521
+2020-05-10 18:18:14,536 from_file: Number of word classes: 34521
+2020-05-10 18:18:14,536 from_file: Building neural network.
+2020-05-10 18:18:44,212 from_file: Restoring neural network state.
+2020-05-10 18:18:45,678 score: Building text scorer.
+2020-05-10 18:19:35,240 score: Scoring text.
+Number of sentences: 3006
+Number of words: 42881
+Number of tokens: 42881
+Number of predicted probabilities: 39875
+Number of excluded (OOV) words: 0
+Number of zero probabilities: 0
+Cross entropy (base e): 16.01389811807286
+Perplexity: 9010472.93369161

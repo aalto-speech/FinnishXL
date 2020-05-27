@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#SBATCH -p dgx-common
+#SBATCH --time=20:00:00
+#SBATCH --mem=20G
+#SBATCH --gres=gpu:1
+
+srun python eval_on_yle_test_new.py > yle_test_ppl

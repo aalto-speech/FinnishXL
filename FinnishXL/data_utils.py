@@ -304,7 +304,7 @@ class Corpus(object):
             if self.dataset in ['ptb', 'wt2', 'wt103', 'enwik8', 'text8','Kdev']:
                 data_iter = LMOrderedIterator(self.train, *args, **kwargs)
             elif self.dataset == 'Ktrain':
-                kwargs['shuffle'] = False
+                kwargs['shuffle'] = True
                 #data_iter = LMMultiFileIterator(self.train, self.vocab, *args, **kwargs)
                 data_iter=LMShuffledIterator(self.train, *args, **kwargs)
                 #data_iter = LMOrderedIterator(self.train, *args, **kwargs)

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#SBATCH -p dgx-spa
+#SBATCH --time=1-10:00:00
+#SBATCH --mem-per-cpu=4G
+
+export MKL_THREADING_LAYER=GNU
+        declare -a DEVICES=(cuda0)
+        RUN_GPU='srun --gres=gpu:1'
+export OMP_NUM_THREADS=1
+declare -a devices=("${DEVICES[@]:-cuda0}")
+declare -a contexts
+for i in "${!devices[@]}"
+do
+        contexts+=("dev${i}->${devices[${i}]}")
+done
+THEANO_FLAGS="floatX=float32,device=${devices[0]}"
+if [ ${#devices[@]} -gt 1 ]
+then
+        THEANO_FLAGS=$(IFS=,; echo "${THEANO_FLAGS},contexts=${contexts[*]}")
+fi
+THEANO_FLAGS="${THEANO_FLAGS},base_compiledir=${TMPDIR}/theano"
+THEANO_FLAGS="${THEANO_FLAGS},exception_verbosity=high"
+[ -n "${DEBUG}" ] && THEANO_FLAGS="${THEANO_FLAGS},optimizer=None"
+THEANO_FLAGS="${THEANO_FLAGS},openmp=False"
+#[ -d /usr/lib64 ] && THEANO_FLAGS="${THEANO_FLAGS},openmp=True,blas.ldflags=-L/usr/lib64 -lopenblaso"
+
+export THEANO_FLAGS
+theanolm score --output perplexity /scratch/work/psmit/chars-fin-2017/am/data/lm/morfessor_f2_a0.001_tokens_aff/rescore/word+proj500+lstm1500+htanh1500x4+dropout0.2+softmax_e13.5_t468.h5 /m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/yle_test_new > yle_test_ppl_psmit

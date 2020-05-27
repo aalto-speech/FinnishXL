@@ -1,0 +1,30 @@
+/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/torch/serialization.py:454: SourceChangeWarning: source code of class 'mem_transformer.MemTransformerLM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/torch/serialization.py:454: SourceChangeWarning: source code of class 'torch.nn.modules.container.ModuleList' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/torch/serialization.py:454: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/torch/serialization.py:454: SourceChangeWarning: source code of class 'torch.nn.modules.container.ParameterList' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/torch/serialization.py:454: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/torch/serialization.py:454: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/torch/serialization.py:454: SourceChangeWarning: source code of class 'torch.nn.modules.activation.ReLU' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "eval_on_yle_test_new.py", line 106, in <module>
+    rescore()
+  File "eval_on_yle_test_new.py", line 98, in rescore
+    ret = model(data, target,*mems)
+  File "/home/jaina5/.conda/envs/TensorflowEnv/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 745, in forward
+    hidden, new_mems = self._forward(data, mems=mems)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 706, in _forward
+    mems_i += pos_emb[:mlen]
+RuntimeError: The size of tensor a (0) must match the size of tensor b (1024) at non-singleton dimension 2
+/usr/bin/epilog: line 3: grep: command not found
+srun: error: dgx02: task 0: Exited with exit code 1
+srun: Terminating job step 52591806.0
+/usr/bin/epilog: line 3: grep: command not found

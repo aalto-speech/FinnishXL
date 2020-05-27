@@ -8,7 +8,7 @@ if [[ $1 == 'train' ]]; then
         --dataset Ktrain \
         --n_layer 72 \
         --d_model 512 \
-        --n_head 16 \
+        --n_head 8 \
         --d_head 40 \
         --d_inner 1024 \
         --dropout 0.05 \
@@ -24,6 +24,8 @@ if [[ $1 == 'train' ]]; then
         --multi_gpu \
         --gpu0_bsz 0 \
         --batch_chunk 2 \
+        --restart \
+        --restart_dir /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200421-183714 \
         ${@:2}
 elif [[ $1 == 'eval' ]]; then
     echo 'Run evaluation...'

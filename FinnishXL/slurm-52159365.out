@@ -1,0 +1,1007 @@
+Run training...
+Experiment dir : /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200426-132928
+Loading cached dataset...
+====================================================================================================
+    - data : /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/fin_Data/
+    - dataset : Ktrain
+    - n_layer : 72
+    - n_head : 8
+    - d_head : 40
+    - d_embed : 512
+    - d_model : 512
+    - d_inner : 1024
+    - dropout : 0.05
+    - dropatt : 0.05
+    - init : normal
+    - emb_init : normal
+    - init_range : 0.1
+    - emb_init_range : 0.01
+    - init_std : 0.02
+    - proj_init_std : 0.01
+    - optim : adam
+    - lr : 0.00025
+    - mom : 0.0
+    - scheduler : cosine
+    - warmup_step : 40000
+    - decay_rate : 0.5
+    - lr_min : 0.0
+    - clip : 0.25
+    - clip_nonemb : False
+    - max_step : 1200000
+    - batch_size : 512
+    - batch_chunk : 2
+    - tgt_len : 32
+    - eval_tgt_len : 32
+    - ext_len : 0
+    - mem_len : 32
+    - not_tied : False
+    - seed : 1111
+    - cuda : True
+    - adaptive : False
+    - div_val : 1
+    - pre_lnorm : False
+    - varlen : False
+    - multi_gpu : True
+    - log_interval : 200
+    - eval_interval : 4000
+    - work_dir : /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200426-132928
+    - restart : True
+    - restart_dir : /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200421-183714
+    - debug : False
+    - same_length : False
+    - attn_type : 0
+    - clamp_len : -1
+    - eta_min : 0.0
+    - gpu0_bsz : 0
+    - max_eval_steps : -1
+    - sample_softmax : -1
+    - patience : 0
+    - finetune_v2 : False
+    - finetune_v3 : False
+    - fp16 : False
+    - static_loss_scale : 1
+    - dynamic_loss_scale : False
+    - tied : True
+    - n_token : 35921
+    - n_all_param : 153166033
+    - n_nonemb_param : 134737920
+====================================================================================================
+#params = 153166033
+#non emb params = 134737920
+| epoch   1 step   104200 |    200 batches | lr 0.000245 | ms/batch 2278.19 | loss  3.85 | ppl    47.228
+| epoch   1 step   104400 |    400 batches | lr 0.000245 | ms/batch 2217.86 | loss  3.85 | ppl    47.185
+| epoch   1 step   104600 |    600 batches | lr 0.000245 | ms/batch 2217.26 | loss  3.85 | ppl    47.118
+| epoch   1 step   104800 |    800 batches | lr 0.000245 | ms/batch 2225.52 | loss  3.85 | ppl    47.218
+| epoch   1 step   105000 |   1000 batches | lr 0.000245 | ms/batch 2245.50 | loss  3.85 | ppl    47.185
+| epoch   1 step   105200 |   1200 batches | lr 0.000245 | ms/batch 2245.61 | loss  3.86 | ppl    47.414
+| epoch   1 step   105400 |   1400 batches | lr 0.000245 | ms/batch 2465.89 | loss  3.86 | ppl    47.436
+| epoch   1 step   105600 |   1600 batches | lr 0.000245 | ms/batch 2244.46 | loss  3.86 | ppl    47.294
+| epoch   1 step   105800 |   1800 batches | lr 0.000245 | ms/batch 2246.23 | loss  3.85 | ppl    47.213
+| epoch   1 step   106000 |   2000 batches | lr 0.000245 | ms/batch 2468.00 | loss  3.86 | ppl    47.578
+| epoch   1 step   106200 |   2200 batches | lr 0.000245 | ms/batch 2246.11 | loss  3.86 | ppl    47.378
+| epoch   1 step   106400 |   2400 batches | lr 0.000245 | ms/batch 2247.05 | loss  3.86 | ppl    47.301
+| epoch   1 step   106600 |   2600 batches | lr 0.000245 | ms/batch 2457.13 | loss  3.86 | ppl    47.297
+| epoch   1 step   106800 |   2800 batches | lr 0.000245 | ms/batch 2237.15 | loss  3.86 | ppl    47.333
+| epoch   1 step   107000 |   3000 batches | lr 0.000245 | ms/batch 2239.44 | loss  3.86 | ppl    47.442
+| epoch   1 step   107200 |   3200 batches | lr 0.000245 | ms/batch 2240.33 | loss  3.86 | ppl    47.567
+| epoch   1 step   107400 |   3400 batches | lr 0.000245 | ms/batch 2452.37 | loss  3.86 | ppl    47.373
+| epoch   1 step   107600 |   3600 batches | lr 0.000245 | ms/batch 2239.07 | loss  3.86 | ppl    47.453
+| epoch   1 step   107800 |   3800 batches | lr 0.000245 | ms/batch 2239.94 | loss  3.86 | ppl    47.506
+| epoch   1 step   108000 |   4000 batches | lr 0.000245 | ms/batch 2458.93 | loss  3.85 | ppl    47.200
+----------------------------------------------------------------------------------------------------
+| Eval  27 at step   108000 | time: 9939.62s | valid loss  4.10 | valid ppl    60.486
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   108200 |   4200 batches | lr 0.000245 | ms/batch 6044.97 | loss  3.86 | ppl    47.620
+| epoch   1 step   108400 |   4400 batches | lr 0.000245 | ms/batch 2245.35 | loss  3.86 | ppl    47.421
+| epoch   1 step   108600 |   4600 batches | lr 0.000245 | ms/batch 2247.40 | loss  3.86 | ppl    47.310
+| epoch   1 step   108800 |   4800 batches | lr 0.000245 | ms/batch 2466.68 | loss  3.86 | ppl    47.489
+| epoch   1 step   109000 |   5000 batches | lr 0.000245 | ms/batch 2241.99 | loss  3.86 | ppl    47.643
+| epoch   1 step   109200 |   5200 batches | lr 0.000245 | ms/batch 2240.97 | loss  3.86 | ppl    47.378
+| epoch   1 step   109400 |   5400 batches | lr 0.000245 | ms/batch 2456.49 | loss  3.86 | ppl    47.314
+| epoch   1 step   109600 |   5600 batches | lr 0.000245 | ms/batch 2239.29 | loss  3.86 | ppl    47.439
+| epoch   1 step   109800 |   5800 batches | lr 0.000245 | ms/batch 2246.33 | loss  3.86 | ppl    47.447
+| epoch   1 step   110000 |   6000 batches | lr 0.000245 | ms/batch 2249.07 | loss  3.86 | ppl    47.568
+| epoch   1 step   110200 |   6200 batches | lr 0.000245 | ms/batch 2473.90 | loss  3.87 | ppl    47.740
+| epoch   1 step   110400 |   6400 batches | lr 0.000245 | ms/batch 2249.07 | loss  3.86 | ppl    47.672
+| epoch   1 step   110600 |   6600 batches | lr 0.000245 | ms/batch 2249.05 | loss  3.87 | ppl    47.718
+| epoch   1 step   110800 |   6800 batches | lr 0.000245 | ms/batch 2512.66 | loss  3.86 | ppl    47.484
+| epoch   1 step   111000 |   7000 batches | lr 0.000245 | ms/batch 2351.39 | loss  3.86 | ppl    47.643
+| epoch   1 step   111200 |   7200 batches | lr 0.000245 | ms/batch 2355.08 | loss  3.86 | ppl    47.625
+| epoch   1 step   111400 |   7400 batches | lr 0.000245 | ms/batch 2583.70 | loss  3.86 | ppl    47.346
+| epoch   1 step   111600 |   7600 batches | lr 0.000245 | ms/batch 2350.58 | loss  3.86 | ppl    47.513
+| epoch   1 step   111800 |   7800 batches | lr 0.000245 | ms/batch 2354.57 | loss  3.86 | ppl    47.442
+| epoch   1 step   112000 |   8000 batches | lr 0.000245 | ms/batch 2363.34 | loss  3.86 | ppl    47.536
+----------------------------------------------------------------------------------------------------
+| Eval  28 at step   112000 | time: 10114.49s | valid loss  4.10 | valid ppl    60.638
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   112200 |   8200 batches | lr 0.000245 | ms/batch 6423.09 | loss  3.86 | ppl    47.696
+| epoch   1 step   112400 |   8400 batches | lr 0.000245 | ms/batch 2356.26 | loss  3.86 | ppl    47.374
+| epoch   1 step   112600 |   8600 batches | lr 0.000245 | ms/batch 2356.67 | loss  3.86 | ppl    47.666
+| epoch   1 step   112800 |   8800 batches | lr 0.000245 | ms/batch 2550.67 | loss  3.86 | ppl    47.429
+| epoch   1 step   113000 |   9000 batches | lr 0.000245 | ms/batch 2355.12 | loss  3.87 | ppl    47.830
+| epoch   1 step   113200 |   9200 batches | lr 0.000245 | ms/batch 2353.94 | loss  3.86 | ppl    47.604
+| epoch   1 step   113400 |   9400 batches | lr 0.000245 | ms/batch 2576.75 | loss  3.87 | ppl    47.771
+| epoch   1 step   113600 |   9600 batches | lr 0.000245 | ms/batch 2359.81 | loss  3.87 | ppl    47.863
+| epoch   1 step   113800 |   9800 batches | lr 0.000244 | ms/batch 2347.88 | loss  3.87 | ppl    47.798
+| epoch   1 step   114000 |  10000 batches | lr 0.000244 | ms/batch 2359.65 | loss  3.86 | ppl    47.629
+| epoch   1 step   114200 |  10200 batches | lr 0.000244 | ms/batch 2574.82 | loss  3.87 | ppl    47.982
+| epoch   1 step   114400 |  10400 batches | lr 0.000244 | ms/batch 2350.74 | loss  3.88 | ppl    48.624
+| epoch   1 step   114600 |  10600 batches | lr 0.000244 | ms/batch 2355.36 | loss  3.88 | ppl    48.563
+| epoch   1 step   114800 |  10800 batches | lr 0.000244 | ms/batch 2579.29 | loss  3.88 | ppl    48.343
+| epoch   1 step   115000 |  11000 batches | lr 0.000244 | ms/batch 2352.41 | loss  3.86 | ppl    47.667
+| epoch   1 step   115200 |  11200 batches | lr 0.000244 | ms/batch 2327.11 | loss  3.87 | ppl    47.813
+| epoch   1 step   115400 |  11400 batches | lr 0.000244 | ms/batch 2347.30 | loss  3.86 | ppl    47.564
+| epoch   1 step   115600 |  11600 batches | lr 0.000244 | ms/batch 2572.20 | loss  3.86 | ppl    47.538
+| epoch   1 step   115800 |  11800 batches | lr 0.000244 | ms/batch 2358.04 | loss  3.86 | ppl    47.613
+| epoch   1 step   116000 |  12000 batches | lr 0.000244 | ms/batch 2353.09 | loss  3.87 | ppl    47.969
+----------------------------------------------------------------------------------------------------
+| Eval  29 at step   116000 | time: 10439.46s | valid loss  4.10 | valid ppl    60.312
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   116200 |  12200 batches | lr 0.000244 | ms/batch 6437.72 | loss  3.86 | ppl    47.688
+| epoch   1 step   116400 |  12400 batches | lr 0.000244 | ms/batch 2353.97 | loss  3.87 | ppl    47.945
+| epoch   1 step   116600 |  12600 batches | lr 0.000244 | ms/batch 2350.54 | loss  3.87 | ppl    47.766
+| epoch   1 step   116800 |  12800 batches | lr 0.000244 | ms/batch 2576.43 | loss  3.98 | ppl    53.474
+| epoch   1 step   117000 |  13000 batches | lr 0.000244 | ms/batch 2352.88 | loss  3.87 | ppl    48.044
+| epoch   1 step   117200 |  13200 batches | lr 0.000244 | ms/batch 2336.08 | loss  3.87 | ppl    47.713
+| epoch   1 step   117400 |  13400 batches | lr 0.000244 | ms/batch 2335.77 | loss  3.87 | ppl    48.034
+| epoch   1 step   117600 |  13600 batches | lr 0.000244 | ms/batch 2575.92 | loss  3.87 | ppl    48.091
+| epoch   1 step   117800 |  13800 batches | lr 0.000244 | ms/batch 2353.17 | loss  3.87 | ppl    48.153
+| epoch   1 step   118000 |  14000 batches | lr 0.000244 | ms/batch 2359.22 | loss  3.88 | ppl    48.567
+| epoch   1 step   118200 |  14200 batches | lr 0.000244 | ms/batch 2571.39 | loss  3.89 | ppl    48.784
+| epoch   1 step   118400 |  14400 batches | lr 0.000244 | ms/batch 2356.28 | loss  3.89 | ppl    48.915
+| epoch   1 step   118600 |  14600 batches | lr 0.000244 | ms/batch 2359.79 | loss  3.89 | ppl    48.743
+| epoch   1 step   118800 |  14800 batches | lr 0.000244 | ms/batch 2581.24 | loss  3.89 | ppl    48.785
+| epoch   1 step   119000 |  15000 batches | lr 0.000244 | ms/batch 2350.00 | loss  3.88 | ppl    48.524
+| epoch   1 step   119200 |  15200 batches | lr 0.000244 | ms/batch 2353.57 | loss  3.89 | ppl    48.859
+| epoch   1 step   119400 |  15400 batches | lr 0.000244 | ms/batch 2356.55 | loss  3.88 | ppl    48.649
+| epoch   1 step   119600 |  15600 batches | lr 0.000244 | ms/batch 2553.50 | loss  3.89 | ppl    48.915
+| epoch   1 step   119800 |  15800 batches | lr 0.000244 | ms/batch 2334.16 | loss  3.88 | ppl    48.404
+| epoch   1 step   120000 |  16000 batches | lr 0.000244 | ms/batch 2355.35 | loss  3.88 | ppl    48.379
+----------------------------------------------------------------------------------------------------
+| Eval  30 at step   120000 | time: 10443.14s | valid loss  4.13 | valid ppl    62.156
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   120200 |  16200 batches | lr 0.000244 | ms/batch 6439.51 | loss  3.88 | ppl    48.274
+| epoch   1 step   120400 |  16400 batches | lr 0.000244 | ms/batch 2352.78 | loss  3.89 | ppl    48.687
+| epoch   1 step   120600 |  16600 batches | lr 0.000244 | ms/batch 2357.10 | loss  3.89 | ppl    48.759
+| epoch   1 step   120800 |  16800 batches | lr 0.000244 | ms/batch 2351.17 | loss  3.91 | ppl    49.949
+| epoch   1 step   121000 |  17000 batches | lr 0.000244 | ms/batch 2569.03 | loss  3.93 | ppl    50.908
+| epoch   1 step   121200 |  17200 batches | lr 0.000244 | ms/batch 2345.36 | loss  3.89 | ppl    48.920
+| epoch   1 step   121400 |  17400 batches | lr 0.000244 | ms/batch 2346.60 | loss  3.92 | ppl    50.291
+| epoch   1 step   121600 |  17600 batches | lr 0.000244 | ms/batch 2568.30 | loss  3.88 | ppl    48.582
+| epoch   1 step   121800 |  17800 batches | lr 0.000244 | ms/batch 2316.66 | loss  3.88 | ppl    48.402
+| epoch   1 step   122000 |  18000 batches | lr 0.000244 | ms/batch 2347.93 | loss  3.88 | ppl    48.624
+| epoch   1 step   122200 |  18200 batches | lr 0.000244 | ms/batch 2565.16 | loss  3.88 | ppl    48.387
+| epoch   1 step   122400 |  18400 batches | lr 0.000244 | ms/batch 2349.70 | loss  3.89 | ppl    48.681
+| epoch   1 step   122600 |  18600 batches | lr 0.000244 | ms/batch 2348.84 | loss  3.88 | ppl    48.455
+| epoch   1 step   122800 |  18800 batches | lr 0.000244 | ms/batch 2343.76 | loss  3.89 | ppl    48.779
+| epoch   1 step   123000 |  19000 batches | lr 0.000244 | ms/batch 2573.01 | loss  3.89 | ppl    49.106
+| epoch   1 step   123200 |  19200 batches | lr 0.000244 | ms/batch 2347.61 | loss  3.89 | ppl    48.834
+| epoch   1 step   123400 |  19400 batches | lr 0.000244 | ms/batch 2340.33 | loss  3.89 | ppl    48.817
+| epoch   1 step   123600 |  19600 batches | lr 0.000244 | ms/batch 2560.62 | loss  3.88 | ppl    48.497
+| epoch   1 step   123800 |  19800 batches | lr 0.000243 | ms/batch 2345.52 | loss  3.88 | ppl    48.185
+| epoch   1 step   124000 |  20000 batches | lr 0.000243 | ms/batch 2344.17 | loss  3.88 | ppl    48.512
+----------------------------------------------------------------------------------------------------
+| Eval  31 at step   124000 | time: 10406.47s | valid loss  4.12 | valid ppl    61.790
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   124200 |  20200 batches | lr 0.000243 | ms/batch 6339.66 | loss  3.88 | ppl    48.425
+| epoch   1 step   124400 |  20400 batches | lr 0.000243 | ms/batch 2347.91 | loss  3.88 | ppl    48.555
+| epoch   1 step   124600 |  20600 batches | lr 0.000243 | ms/batch 2346.09 | loss  3.89 | ppl    49.095
+| epoch   1 step   124800 |  20800 batches | lr 0.000243 | ms/batch 2344.52 | loss  3.88 | ppl    48.432
+| epoch   1 step   125000 |  21000 batches | lr 0.000243 | ms/batch 2562.00 | loss  3.90 | ppl    49.245
+| epoch   1 step   125200 |  21200 batches | lr 0.000243 | ms/batch 2353.81 | loss  3.90 | ppl    49.532
+| epoch   1 step   125400 |  21400 batches | lr 0.000243 | ms/batch 2344.30 | loss  3.88 | ppl    48.501
+| epoch   1 step   125600 |  21600 batches | lr 0.000243 | ms/batch 2558.50 | loss  3.88 | ppl    48.398
+| epoch   1 step   125800 |  21800 batches | lr 0.000243 | ms/batch 2346.49 | loss  3.88 | ppl    48.333
+| epoch   1 step   126000 |  22000 batches | lr 0.000243 | ms/batch 2348.95 | loss  3.88 | ppl    48.545
+| epoch   1 step   126200 |  22200 batches | lr 0.000243 | ms/batch 2323.45 | loss  3.88 | ppl    48.270
+| epoch   1 step   126400 |  22400 batches | lr 0.000243 | ms/batch 2557.32 | loss  3.88 | ppl    48.290
+| epoch   1 step   126600 |  22600 batches | lr 0.000243 | ms/batch 2346.17 | loss  3.88 | ppl    48.483
+| epoch   1 step   126800 |  22800 batches | lr 0.000243 | ms/batch 2349.57 | loss  3.88 | ppl    48.492
+| epoch   1 step   127000 |  23000 batches | lr 0.000243 | ms/batch 2560.97 | loss  3.88 | ppl    48.567
+| epoch   1 step   127200 |  23200 batches | lr 0.000243 | ms/batch 2343.81 | loss  3.90 | ppl    49.349
+| epoch   1 step   127400 |  23400 batches | lr 0.000243 | ms/batch 2352.90 | loss  3.89 | ppl    48.833
+| epoch   1 step   127600 |  23600 batches | lr 0.000243 | ms/batch 2353.76 | loss  3.87 | ppl    48.130
+| epoch   1 step   127800 |  23800 batches | lr 0.000243 | ms/batch 2559.61 | loss  3.89 | ppl    48.840
+| epoch   1 step   128000 |  24000 batches | lr 0.000243 | ms/batch 2342.13 | loss  3.88 | ppl    48.463
+----------------------------------------------------------------------------------------------------
+| Eval  32 at step   128000 | time: 10394.83s | valid loss  4.14 | valid ppl    62.621
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   128200 |  24200 batches | lr 0.000243 | ms/batch 6106.57 | loss  3.88 | ppl    48.540
+| epoch   1 step   128400 |  24400 batches | lr 0.000243 | ms/batch 2547.49 | loss  3.88 | ppl    48.382
+| epoch   1 step   128600 |  24600 batches | lr 0.000243 | ms/batch 2350.43 | loss  3.88 | ppl    48.525
+| epoch   1 step   128800 |  24800 batches | lr 0.000243 | ms/batch 2348.91 | loss  3.88 | ppl    48.342
+| epoch   1 step   129000 |  25000 batches | lr 0.000243 | ms/batch 2562.45 | loss  3.88 | ppl    48.637
+| epoch   1 step   129200 |  25200 batches | lr 0.000243 | ms/batch 2343.45 | loss  3.88 | ppl    48.538
+| epoch   1 step   129400 |  25400 batches | lr 0.000243 | ms/batch 2346.53 | loss  3.88 | ppl    48.404
+| epoch   1 step   129600 |  25600 batches | lr 0.000243 | ms/batch 2575.22 | loss  3.88 | ppl    48.641
+| epoch   1 step   129800 |  25800 batches | lr 0.000243 | ms/batch 2348.83 | loss  3.88 | ppl    48.293
+| epoch   1 step   130000 |  26000 batches | lr 0.000243 | ms/batch 2339.11 | loss  3.87 | ppl    48.080
+| epoch   1 step   130200 |  26200 batches | lr 0.000243 | ms/batch 2345.63 | loss  3.87 | ppl    48.077
+| epoch   1 step   130400 |  26400 batches | lr 0.000243 | ms/batch 2567.20 | loss  3.89 | ppl    48.831
+| epoch   1 step   130600 |  26600 batches | lr 0.000243 | ms/batch 2329.40 | loss  3.87 | ppl    48.161
+| epoch   1 step   130800 |  26800 batches | lr 0.000243 | ms/batch 2326.37 | loss  3.98 | ppl    53.331
+| epoch   1 step   131000 |  27000 batches | lr 0.000243 | ms/batch 2344.72 | loss  3.87 | ppl    47.956
+| epoch   1 step   131200 |  27200 batches | lr 0.000243 | ms/batch 2573.53 | loss  3.88 | ppl    48.317
+| epoch   1 step   131400 |  27400 batches | lr 0.000243 | ms/batch 2349.56 | loss  3.87 | ppl    48.062
+| epoch   1 step   131600 |  27600 batches | lr 0.000243 | ms/batch 2344.14 | loss  3.88 | ppl    48.666
+| epoch   1 step   131800 |  27800 batches | lr 0.000243 | ms/batch 2562.24 | loss  3.88 | ppl    48.498
+| epoch   1 step   132000 |  28000 batches | lr 0.000243 | ms/batch 2354.37 | loss  3.88 | ppl    48.226
+----------------------------------------------------------------------------------------------------
+| Eval  33 at step   132000 | time: 10388.36s | valid loss  4.12 | valid ppl    61.621
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   132200 |  28200 batches | lr 0.000243 | ms/batch 6090.14 | loss  3.88 | ppl    48.320
+| epoch   1 step   132400 |  28400 batches | lr 0.000243 | ms/batch 2580.79 | loss  3.89 | ppl    48.947
+| epoch   1 step   132600 |  28600 batches | lr 0.000243 | ms/batch 2355.46 | loss  3.90 | ppl    49.343
+| epoch   1 step   132800 |  28800 batches | lr 0.000243 | ms/batch 2324.29 | loss  3.91 | ppl    49.682
+| epoch   1 step   133000 |  29000 batches | lr 0.000242 | ms/batch 2355.35 | loss  3.91 | ppl    49.771
+| epoch   1 step   133200 |  29200 batches | lr 0.000242 | ms/batch 2582.53 | loss  3.91 | ppl    49.694
+| epoch   1 step   133400 |  29400 batches | lr 0.000242 | ms/batch 2359.36 | loss  3.88 | ppl    48.588
+| epoch   1 step   133600 |  29600 batches | lr 0.000242 | ms/batch 2353.55 | loss  3.88 | ppl    48.235
+| epoch   1 step   133800 |  29800 batches | lr 0.000242 | ms/batch 2573.85 | loss  3.87 | ppl    47.906
+| epoch   1 step   134000 |  30000 batches | lr 0.000242 | ms/batch 2360.25 | loss  3.87 | ppl    48.021
+| epoch   1 step   134200 |  30200 batches | lr 0.000242 | ms/batch 2359.84 | loss  3.87 | ppl    48.049
+| epoch   1 step   134400 |  30400 batches | lr 0.000242 | ms/batch 2580.44 | loss  3.87 | ppl    47.911
+| epoch   1 step   134600 |  30600 batches | lr 0.000242 | ms/batch 2354.11 | loss  3.87 | ppl    47.717
+| epoch   1 step   134800 |  30800 batches | lr 0.000242 | ms/batch 2356.16 | loss  3.86 | ppl    47.670
+| epoch   1 step   135000 |  31000 batches | lr 0.000242 | ms/batch 2573.52 | loss  3.87 | ppl    47.720
+| epoch   1 step   135200 |  31200 batches | lr 0.000242 | ms/batch 2323.01 | loss  3.86 | ppl    47.630
+| epoch   1 step   135400 |  31400 batches | lr 0.000242 | ms/batch 2357.29 | loss  3.86 | ppl    47.484
+| epoch   1 step   135600 |  31600 batches | lr 0.000242 | ms/batch 2354.59 | loss  3.87 | ppl    47.712
+| epoch   1 step   135800 |  31800 batches | lr 0.000242 | ms/batch 2581.58 | loss  3.86 | ppl    47.571
+| epoch   1 step   136000 |  32000 batches | lr 0.000242 | ms/batch 2356.00 | loss  3.88 | ppl    48.520
+----------------------------------------------------------------------------------------------------
+| Eval  34 at step   136000 | time: 10441.08s | valid loss  4.10 | valid ppl    60.112
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   136200 |  32200 batches | lr 0.000242 | ms/batch 6196.95 | loss  3.86 | ppl    47.629
+| epoch   1 step   136400 |  32400 batches | lr 0.000242 | ms/batch 2356.18 | loss  3.86 | ppl    47.608
+| epoch   1 step   136600 |  32600 batches | lr 0.000242 | ms/batch 2580.55 | loss  3.86 | ppl    47.277
+| epoch   1 step   136800 |  32800 batches | lr 0.000242 | ms/batch 2355.03 | loss  3.86 | ppl    47.676
+| epoch   1 step   137000 |  33000 batches | lr 0.000242 | ms/batch 2360.87 | loss  3.86 | ppl    47.534
+| epoch   1 step   137200 |  33200 batches | lr 0.000242 | ms/batch 2549.26 | loss  3.88 | ppl    48.186
+| epoch   1 step   137400 |  33400 batches | lr 0.000242 | ms/batch 2343.89 | loss  3.86 | ppl    47.669
+| epoch   1 step   137600 |  33600 batches | lr 0.000242 | ms/batch 2359.87 | loss  3.87 | ppl    47.823
+| epoch   1 step   137800 |  33800 batches | lr 0.000242 | ms/batch 2590.99 | loss  3.87 | ppl    47.949
+| epoch   1 step   138000 |  34000 batches | lr 0.000242 | ms/batch 2358.40 | loss  3.96 | ppl    52.287
+| epoch   1 step   138200 |  34200 batches | lr 0.000242 | ms/batch 2351.36 | loss  3.86 | ppl    47.687
+| epoch   1 step   138400 |  34400 batches | lr 0.000242 | ms/batch 2357.99 | loss  3.87 | ppl    47.878
+| epoch   1 step   138600 |  34600 batches | lr 0.000242 | ms/batch 2584.57 | loss  3.87 | ppl    47.786
+| epoch   1 step   138800 |  34800 batches | lr 0.000242 | ms/batch 2352.89 | loss  3.87 | ppl    47.842
+| epoch   1 step   139000 |  35000 batches | lr 0.000242 | ms/batch 2351.88 | loss  3.87 | ppl    47.799
+| epoch   1 step   139200 |  35200 batches | lr 0.000242 | ms/batch 2571.87 | loss  3.86 | ppl    47.442
+| epoch   1 step   139400 |  35400 batches | lr 0.000242 | ms/batch 2357.70 | loss  3.86 | ppl    47.649
+| epoch   1 step   139600 |  35600 batches | lr 0.000242 | ms/batch 2338.03 | loss  3.86 | ppl    47.691
+| epoch   1 step   139800 |  35800 batches | lr 0.000242 | ms/batch 2563.91 | loss  3.86 | ppl    47.585
+| epoch   1 step   140000 |  36000 batches | lr 0.000242 | ms/batch 2358.55 | loss  3.88 | ppl    48.448
+----------------------------------------------------------------------------------------------------
+| Eval  35 at step   140000 | time: 10442.35s | valid loss  4.10 | valid ppl    60.439
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   140200 |  36200 batches | lr 0.000242 | ms/batch 6155.87 | loss  3.87 | ppl    47.722
+| epoch   1 step   140400 |  36400 batches | lr 0.000242 | ms/batch 2353.39 | loss  3.88 | ppl    48.435
+| epoch   1 step   140600 |  36600 batches | lr 0.000242 | ms/batch 2588.71 | loss  3.87 | ppl    48.156
+| epoch   1 step   140800 |  36800 batches | lr 0.000242 | ms/batch 2360.57 | loss  3.87 | ppl    47.960
+| epoch   1 step   141000 |  37000 batches | lr 0.000242 | ms/batch 2351.39 | loss  5.59 | ppl   268.756
+| epoch   1 step   141200 |  37200 batches | lr 0.000242 | ms/batch 2578.66 | loss  7.57 | ppl  1938.816
+| epoch   1 step   141400 |  37400 batches | lr 0.000242 | ms/batch 2350.50 | loss  7.57 | ppl  1939.960
+| epoch   1 step   141600 |  37600 batches | lr 0.000242 | ms/batch 2351.44 | loss  7.59 | ppl  1970.539
+| epoch   1 step   141800 |  37800 batches | lr 0.000241 | ms/batch 2320.86 | loss  7.57 | ppl  1929.505
+| epoch   1 step   142000 |  38000 batches | lr 0.000241 | ms/batch 2573.21 | loss  7.56 | ppl  1917.135
+| epoch   1 step   142200 |  38200 batches | lr 0.000241 | ms/batch 2351.76 | loss  7.57 | ppl  1934.812
+| epoch   1 step   142400 |  38400 batches | lr 0.000241 | ms/batch 2352.27 | loss  7.57 | ppl  1929.824
+| epoch   1 step   142600 |  38600 batches | lr 0.000241 | ms/batch 2576.25 | loss  7.56 | ppl  1923.048
+| epoch   1 step   142800 |  38800 batches | lr 0.000241 | ms/batch 2346.94 | loss  7.56 | ppl  1926.890
+| epoch   1 step   143000 |  39000 batches | lr 0.000241 | ms/batch 2354.73 | loss  7.57 | ppl  1931.010
+| epoch   1 step   143200 |  39200 batches | lr 0.000241 | ms/batch 2578.23 | loss  7.56 | ppl  1921.494
+| epoch   1 step   143400 |  39400 batches | lr 0.000241 | ms/batch 2348.20 | loss  7.56 | ppl  1911.433
+| epoch   1 step   143600 |  39600 batches | lr 0.000241 | ms/batch 2347.28 | loss  7.56 | ppl  1916.425
+| epoch   1 step   143800 |  39800 batches | lr 0.000241 | ms/batch 2348.10 | loss  7.56 | ppl  1913.679
+| epoch   1 step   144000 |  40000 batches | lr 0.000241 | ms/batch 2563.17 | loss  7.56 | ppl  1917.236
+----------------------------------------------------------------------------------------------------
+| Eval  36 at step   144000 | time: 10441.02s | valid loss  8.46 | valid ppl  4736.440
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   144200 |  40200 batches | lr 0.000241 | ms/batch 6203.00 | loss  7.57 | ppl  1930.075
+| epoch   1 step   144400 |  40400 batches | lr 0.000241 | ms/batch 2351.96 | loss  7.56 | ppl  1925.497
+| epoch   1 step   144600 |  40600 batches | lr 0.000241 | ms/batch 2572.45 | loss  7.57 | ppl  1934.852
+| epoch   1 step   144800 |  40800 batches | lr 0.000241 | ms/batch 2344.05 | loss  7.56 | ppl  1922.704
+| epoch   1 step   145000 |  41000 batches | lr 0.000241 | ms/batch 2352.08 | loss  7.56 | ppl  1914.082
+| epoch   1 step   145200 |  41200 batches | lr 0.000241 | ms/batch 2353.76 | loss  7.56 | ppl  1916.363
+| epoch   1 step   145400 |  41400 batches | lr 0.000241 | ms/batch 2578.25 | loss  7.56 | ppl  1925.236
+| epoch   1 step   145600 |  41600 batches | lr 0.000241 | ms/batch 2346.50 | loss  7.56 | ppl  1914.903
+| epoch   1 step   145800 |  41800 batches | lr 0.000241 | ms/batch 2346.39 | loss  7.57 | ppl  1931.452
+| epoch   1 step   146000 |  42000 batches | lr 0.000241 | ms/batch 2571.20 | loss  7.55 | ppl  1910.170
+| epoch   1 step   146200 |  42200 batches | lr 0.000241 | ms/batch 2328.41 | loss  7.56 | ppl  1913.557
+| epoch   1 step   146400 |  42400 batches | lr 0.000241 | ms/batch 2337.94 | loss  7.56 | ppl  1920.545
+| epoch   1 step   146600 |  42600 batches | lr 0.000241 | ms/batch 2571.78 | loss  7.56 | ppl  1913.688
+| epoch   1 step   146800 |  42800 batches | lr 0.000241 | ms/batch 2350.59 | loss  7.56 | ppl  1928.330
+| epoch   1 step   147000 |  43000 batches | lr 0.000241 | ms/batch 2346.04 | loss  7.56 | ppl  1917.825
+| epoch   1 step   147200 |  43200 batches | lr 0.000241 | ms/batch 2346.28 | loss  7.56 | ppl  1927.348
+| epoch   1 step   147400 |  43400 batches | lr 0.000241 | ms/batch 2568.20 | loss  7.57 | ppl  1931.880
+| epoch   1 step   147600 |  43600 batches | lr 0.000241 | ms/batch 2345.14 | loss  7.56 | ppl  1912.481
+| epoch   1 step   147800 |  43800 batches | lr 0.000241 | ms/batch 2338.70 | loss  7.55 | ppl  1906.819
+| epoch   1 step   148000 |  44000 batches | lr 0.000241 | ms/batch 2560.91 | loss  7.55 | ppl  1908.663
+----------------------------------------------------------------------------------------------------
+| Eval  37 at step   148000 | time: 10397.81s | valid loss  8.46 | valid ppl  4723.833
+----------------------------------------------------------------------------------------------------
+| epoch   1 step   148200 |  44200 batches | lr 0.000241 | ms/batch 6066.03 | loss  7.56 | ppl  1911.238
+| epoch   1 step   148400 |  44400 batches | lr 0.000241 | ms/batch 2317.12 | loss  7.55 | ppl  1908.087
+| epoch   1 step   148600 |  44600 batches | lr 0.000241 | ms/batch 2561.17 | loss  7.56 | ppl  1918.601
+| epoch   1 step   148800 |  44800 batches | lr 0.000241 | ms/batch 2330.59 | loss  7.55 | ppl  1910.032
+| epoch   1 step   149000 |  45000 batches | lr 0.000241 | ms/batch 2347.92 | loss  7.56 | ppl  1924.269
+| epoch   2 step   149200 |    157 batches | lr 0.000241 | ms/batch 2352.14 | loss  7.55 | ppl  1907.836
+| epoch   2 step   149400 |    357 batches | lr 0.000241 | ms/batch 2564.96 | loss  7.55 | ppl  1904.007
+| epoch   2 step   149600 |    557 batches | lr 0.000241 | ms/batch 2351.32 | loss  7.56 | ppl  1926.519
+| epoch   2 step   149800 |    757 batches | lr 0.000241 | ms/batch 2342.74 | loss  7.56 | ppl  1916.032
+| epoch   2 step   150000 |    957 batches | lr 0.00024 | ms/batch 2566.51 | loss  7.56 | ppl  1911.464
+| epoch   2 step   150200 |   1157 batches | lr 0.00024 | ms/batch 2337.76 | loss  7.56 | ppl  1911.832
+| epoch   2 step   150400 |   1357 batches | lr 0.00024 | ms/batch 2345.80 | loss  7.55 | ppl  1906.138
+| epoch   2 step   150600 |   1557 batches | lr 0.00024 | ms/batch 2340.87 | loss  7.56 | ppl  1914.875
+| epoch   2 step   150800 |   1757 batches | lr 0.00024 | ms/batch 2542.75 | loss  7.56 | ppl  1914.266
+| epoch   2 step   151000 |   1957 batches | lr 0.00024 | ms/batch 2342.23 | loss  7.56 | ppl  1918.041
+| epoch   2 step   151200 |   2157 batches | lr 0.00024 | ms/batch 2342.97 | loss  7.56 | ppl  1911.971
+| epoch   2 step   151400 |   2357 batches | lr 0.00024 | ms/batch 2562.23 | loss  7.55 | ppl  1902.881
+| epoch   2 step   151600 |   2557 batches | lr 0.00024 | ms/batch 2335.01 | loss  7.56 | ppl  1914.086
+| epoch   2 step   151800 |   2757 batches | lr 0.00024 | ms/batch 2335.92 | loss  7.55 | ppl  1907.961
+| epoch   2 step   152000 |   2957 batches | lr 0.00024 | ms/batch 2541.22 | loss  7.56 | ppl  1912.616
+----------------------------------------------------------------------------------------------------
+| Eval  38 at step   152000 | time: 10356.49s | valid loss  8.46 | valid ppl  4731.504
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   152200 |   3157 batches | lr 0.00024 | ms/batch 6025.45 | loss  7.57 | ppl  1930.811
+| epoch   2 step   152400 |   3357 batches | lr 0.00024 | ms/batch 2342.95 | loss  7.56 | ppl  1914.946
+| epoch   2 step   152600 |   3557 batches | lr 0.00024 | ms/batch 2346.50 | loss  7.56 | ppl  1923.142
+| epoch   2 step   152800 |   3757 batches | lr 0.00024 | ms/batch 2553.48 | loss  7.56 | ppl  1917.546
+| epoch   2 step   153000 |   3957 batches | lr 0.00024 | ms/batch 2334.74 | loss  7.56 | ppl  1914.440
+| epoch   2 step   153200 |   4157 batches | lr 0.00024 | ms/batch 2345.72 | loss  7.56 | ppl  1913.762
+| epoch   2 step   153400 |   4357 batches | lr 0.00024 | ms/batch 2577.60 | loss  7.56 | ppl  1915.049
+| epoch   2 step   153600 |   4557 batches | lr 0.00024 | ms/batch 2345.88 | loss  7.55 | ppl  1900.038
+| epoch   2 step   153800 |   4757 batches | lr 0.00024 | ms/batch 2342.42 | loss  7.56 | ppl  1916.801
+| epoch   2 step   154000 |   4957 batches | lr 0.00024 | ms/batch 2308.37 | loss  7.56 | ppl  1919.055
+| epoch   2 step   154200 |   5157 batches | lr 0.00024 | ms/batch 2452.21 | loss  7.56 | ppl  1923.103
+| epoch   2 step   154400 |   5357 batches | lr 0.00024 | ms/batch 2236.42 | loss  7.56 | ppl  1918.917
+| epoch   2 step   154600 |   5557 batches | lr 0.00024 | ms/batch 2237.07 | loss  7.56 | ppl  1916.032
+| epoch   2 step   154800 |   5757 batches | lr 0.00024 | ms/batch 2431.99 | loss  7.56 | ppl  1914.626
+| epoch   2 step   155000 |   5957 batches | lr 0.00024 | ms/batch 2237.89 | loss  7.55 | ppl  1904.636
+| epoch   2 step   155200 |   6157 batches | lr 0.00024 | ms/batch 2238.62 | loss  7.55 | ppl  1906.944
+| epoch   2 step   155400 |   6357 batches | lr 0.00024 | ms/batch 2439.41 | loss  7.56 | ppl  1918.094
+| epoch   2 step   155600 |   6557 batches | lr 0.00024 | ms/batch 2238.81 | loss  7.56 | ppl  1913.046
+| epoch   2 step   155800 |   6757 batches | lr 0.00024 | ms/batch 2242.07 | loss  7.55 | ppl  1909.158
+| epoch   2 step   156000 |   6957 batches | lr 0.00024 | ms/batch 2244.08 | loss  7.55 | ppl  1908.180
+----------------------------------------------------------------------------------------------------
+| Eval  39 at step   156000 | time: 10133.25s | valid loss  8.46 | valid ppl  4735.857
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   156200 |   7157 batches | lr 0.00024 | ms/batch 6283.69 | loss  7.55 | ppl  1896.320
+| epoch   2 step   156400 |   7357 batches | lr 0.00024 | ms/batch 2244.41 | loss  7.56 | ppl  1919.731
+| epoch   2 step   156600 |   7557 batches | lr 0.00024 | ms/batch 2241.67 | loss  7.55 | ppl  1908.232
+| epoch   2 step   156800 |   7757 batches | lr 0.00024 | ms/batch 2465.13 | loss  7.56 | ppl  1925.401
+| epoch   2 step   157000 |   7957 batches | lr 0.00024 | ms/batch 2239.06 | loss  7.55 | ppl  1906.636
+| epoch   2 step   157200 |   8157 batches | lr 0.00024 | ms/batch 2242.65 | loss  7.56 | ppl  1925.927
+| epoch   2 step   157400 |   8357 batches | lr 0.00024 | ms/batch 2444.82 | loss  7.56 | ppl  1921.662
+| epoch   2 step   157600 |   8557 batches | lr 0.00024 | ms/batch 2240.08 | loss  7.56 | ppl  1914.274
+| epoch   2 step   157800 |   8757 batches | lr 0.000239 | ms/batch 2246.23 | loss  7.56 | ppl  1917.667
+| epoch   2 step   158000 |   8957 batches | lr 0.000239 | ms/batch 2249.15 | loss  7.56 | ppl  1925.041
+| epoch   2 step   158200 |   9157 batches | lr 0.000239 | ms/batch 2449.71 | loss  7.56 | ppl  1921.360
+| epoch   2 step   158400 |   9357 batches | lr 0.000239 | ms/batch 2246.60 | loss  7.56 | ppl  1914.572
+| epoch   2 step   158600 |   9557 batches | lr 0.000239 | ms/batch 2247.57 | loss  7.55 | ppl  1906.579
+| epoch   2 step   158800 |   9757 batches | lr 0.000239 | ms/batch 2473.47 | loss  7.57 | ppl  1931.675
+| epoch   2 step   159000 |   9957 batches | lr 0.000239 | ms/batch 2247.59 | loss  7.56 | ppl  1919.127
+| epoch   2 step   159200 |  10157 batches | lr 0.000239 | ms/batch 2248.49 | loss  7.55 | ppl  1908.271
+| epoch   2 step   159400 |  10357 batches | lr 0.000239 | ms/batch 2245.12 | loss  7.56 | ppl  1926.007
+| epoch   2 step   159600 |  10557 batches | lr 0.000239 | ms/batch 2465.56 | loss  7.55 | ppl  1909.973
+| epoch   2 step   159800 |  10757 batches | lr 0.000239 | ms/batch 2241.42 | loss  7.55 | ppl  1905.794
+| epoch   2 step   160000 |  10957 batches | lr 0.000239 | ms/batch 2241.74 | loss  7.55 | ppl  1909.375
+----------------------------------------------------------------------------------------------------
+| Eval  40 at step   160000 | time: 9997.65s | valid loss  8.46 | valid ppl  4727.782
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   160200 |  11157 batches | lr 0.000239 | ms/batch 6357.09 | loss  7.56 | ppl  1913.599
+| epoch   2 step   160400 |  11357 batches | lr 0.000239 | ms/batch 2349.07 | loss  7.56 | ppl  1929.128
+| epoch   2 step   160600 |  11557 batches | lr 0.000239 | ms/batch 2348.79 | loss  7.56 | ppl  1912.311
+| epoch   2 step   160800 |  11757 batches | lr 0.000239 | ms/batch 2546.20 | loss  7.56 | ppl  1912.414
+| epoch   2 step   161000 |  11957 batches | lr 0.000239 | ms/batch 2341.54 | loss  7.55 | ppl  1902.879
+| epoch   2 step   161200 |  12157 batches | lr 0.000239 | ms/batch 2352.56 | loss  7.56 | ppl  1916.221
+| epoch   2 step   161400 |  12357 batches | lr 0.000239 | ms/batch 2353.12 | loss  7.55 | ppl  1908.435
+| epoch   2 step   161600 |  12557 batches | lr 0.000239 | ms/batch 2578.42 | loss  7.56 | ppl  1922.513
+| epoch   2 step   161800 |  12757 batches | lr 0.000239 | ms/batch 2348.31 | loss  7.56 | ppl  1925.117
+| epoch   2 step   162000 |  12957 batches | lr 0.000239 | ms/batch 2348.88 | loss  7.56 | ppl  1912.418
+| epoch   2 step   162200 |  13157 batches | lr 0.000239 | ms/batch 2569.75 | loss  7.56 | ppl  1913.178
+| epoch   2 step   162400 |  13357 batches | lr 0.000239 | ms/batch 2321.39 | loss  7.56 | ppl  1916.340
+| epoch   2 step   162600 |  13557 batches | lr 0.000239 | ms/batch 2345.31 | loss  7.55 | ppl  1901.171
+| epoch   2 step   162800 |  13757 batches | lr 0.000239 | ms/batch 2543.98 | loss  7.56 | ppl  1918.846
+| epoch   2 step   163000 |  13957 batches | lr 0.000239 | ms/batch 2345.14 | loss  7.56 | ppl  1915.948
+| epoch   2 step   163200 |  14157 batches | lr 0.000239 | ms/batch 2345.35 | loss  7.55 | ppl  1906.970
+| epoch   2 step   163400 |  14357 batches | lr 0.000239 | ms/batch 2341.61 | loss  7.56 | ppl  1921.830
+| epoch   2 step   163600 |  14557 batches | lr 0.000239 | ms/batch 2540.82 | loss  7.56 | ppl  1912.956
+| epoch   2 step   163800 |  14757 batches | lr 0.000239 | ms/batch 2339.85 | loss  7.56 | ppl  1919.877
+| epoch   2 step   164000 |  14957 batches | lr 0.000239 | ms/batch 2336.31 | loss  7.56 | ppl  1921.140
+----------------------------------------------------------------------------------------------------
+| Eval  41 at step   164000 | time: 10372.83s | valid loss  8.45 | valid ppl  4685.977
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   164200 |  15157 batches | lr 0.000239 | ms/batch 6285.19 | loss  7.56 | ppl  1910.548
+| epoch   2 step   164400 |  15357 batches | lr 0.000239 | ms/batch 2311.50 | loss  7.56 | ppl  1913.816
+| epoch   2 step   164600 |  15557 batches | lr 0.000239 | ms/batch 2332.33 | loss  7.56 | ppl  1917.153
+| epoch   2 step   164800 |  15757 batches | lr 0.000239 | ms/batch 2341.78 | loss  7.56 | ppl  1921.242
+| epoch   2 step   165000 |  15957 batches | lr 0.000239 | ms/batch 2560.98 | loss  7.56 | ppl  1911.572
+| epoch   2 step   165200 |  16157 batches | lr 0.000238 | ms/batch 2339.43 | loss  7.56 | ppl  1924.146
+| epoch   2 step   165400 |  16357 batches | lr 0.000238 | ms/batch 2333.95 | loss  7.56 | ppl  1919.494
+| epoch   2 step   165600 |  16557 batches | lr 0.000238 | ms/batch 2538.36 | loss  7.56 | ppl  1917.838
+| epoch   2 step   165800 |  16757 batches | lr 0.000238 | ms/batch 2341.14 | loss  7.55 | ppl  1909.419
+| epoch   2 step   166000 |  16957 batches | lr 0.000238 | ms/batch 2336.58 | loss  7.55 | ppl  1909.451
+| epoch   2 step   166200 |  17157 batches | lr 0.000238 | ms/batch 2335.55 | loss  7.56 | ppl  1912.693
+| epoch   2 step   166400 |  17357 batches | lr 0.000238 | ms/batch 2531.46 | loss  7.56 | ppl  1919.653
+| epoch   2 step   166600 |  17557 batches | lr 0.000238 | ms/batch 2337.63 | loss  7.55 | ppl  1901.163
+| epoch   2 step   166800 |  17757 batches | lr 0.000238 | ms/batch 2312.71 | loss  7.55 | ppl  1908.069
+| epoch   2 step   167000 |  17957 batches | lr 0.000238 | ms/batch 2554.74 | loss  7.55 | ppl  1907.936
+| epoch   2 step   167200 |  18157 batches | lr 0.000238 | ms/batch 2341.82 | loss  7.56 | ppl  1921.036
+| epoch   2 step   167400 |  18357 batches | lr 0.000238 | ms/batch 2343.88 | loss  7.56 | ppl  1915.946
+| epoch   2 step   167600 |  18557 batches | lr 0.000238 | ms/batch 2565.21 | loss  7.55 | ppl  1903.686
+| epoch   2 step   167800 |  18757 batches | lr 0.000238 | ms/batch 2341.38 | loss  7.55 | ppl  1908.448
+| epoch   2 step   168000 |  18957 batches | lr 0.000238 | ms/batch 2351.58 | loss  7.55 | ppl  1909.062
+----------------------------------------------------------------------------------------------------
+| Eval  42 at step   168000 | time: 10365.38s | valid loss  8.46 | valid ppl  4705.147
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   168200 |  19157 batches | lr 0.000238 | ms/batch 6355.21 | loss  7.55 | ppl  1908.153
+| epoch   2 step   168400 |  19357 batches | lr 0.000238 | ms/batch 2344.08 | loss  7.55 | ppl  1907.486
+| epoch   2 step   168600 |  19557 batches | lr 0.000238 | ms/batch 2347.33 | loss  7.56 | ppl  1915.366
+| epoch   2 step   168800 |  19757 batches | lr 0.000238 | ms/batch 2327.98 | loss  7.56 | ppl  1916.898
+| epoch   2 step   169000 |  19957 batches | lr 0.000238 | ms/batch 2525.31 | loss  7.55 | ppl  1902.354
+| epoch   2 step   169200 |  20157 batches | lr 0.000238 | ms/batch 2343.55 | loss  7.56 | ppl  1921.922
+| epoch   2 step   169400 |  20357 batches | lr 0.000238 | ms/batch 2348.64 | loss  7.55 | ppl  1902.819
+| epoch   2 step   169600 |  20557 batches | lr 0.000238 | ms/batch 2350.65 | loss  7.56 | ppl  1914.237
+| epoch   2 step   169800 |  20757 batches | lr 0.000238 | ms/batch 2574.60 | loss  7.56 | ppl  1914.241
+| epoch   2 step   170000 |  20957 batches | lr 0.000238 | ms/batch 2347.04 | loss  7.56 | ppl  1927.332
+| epoch   2 step   170200 |  21157 batches | lr 0.000238 | ms/batch 2356.94 | loss  7.56 | ppl  1910.440
+| epoch   2 step   170400 |  21357 batches | lr 0.000238 | ms/batch 2566.15 | loss  7.56 | ppl  1911.540
+| epoch   2 step   170600 |  21557 batches | lr 0.000238 | ms/batch 2340.13 | loss  7.56 | ppl  1917.496
+| epoch   2 step   170800 |  21757 batches | lr 0.000238 | ms/batch 2347.38 | loss  7.56 | ppl  1923.021
+| epoch   2 step   171000 |  21957 batches | lr 0.000238 | ms/batch 2543.34 | loss  7.55 | ppl  1904.978
+| epoch   2 step   171200 |  22157 batches | lr 0.000238 | ms/batch 2322.10 | loss  7.56 | ppl  1913.794
+| epoch   2 step   171400 |  22357 batches | lr 0.000238 | ms/batch 2325.37 | loss  7.55 | ppl  1905.363
+| epoch   2 step   171600 |  22557 batches | lr 0.000238 | ms/batch 2344.73 | loss  7.55 | ppl  1909.151
+| epoch   2 step   171800 |  22757 batches | lr 0.000238 | ms/batch 2545.73 | loss  7.55 | ppl  1906.096
+| epoch   2 step   172000 |  22957 batches | lr 0.000238 | ms/batch 2346.57 | loss  7.56 | ppl  1911.475
+----------------------------------------------------------------------------------------------------
+| Eval  43 at step   172000 | time: 10378.49s | valid loss  8.46 | valid ppl  4741.256
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   172200 |  23157 batches | lr 0.000238 | ms/batch 6154.83 | loss  7.55 | ppl  1910.051
+| epoch   2 step   172400 |  23357 batches | lr 0.000237 | ms/batch 2567.17 | loss  7.56 | ppl  1921.366
+| epoch   2 step   172600 |  23557 batches | lr 0.000237 | ms/batch 2343.31 | loss  7.56 | ppl  1913.756
+| epoch   2 step   172800 |  23757 batches | lr 0.000237 | ms/batch 2343.13 | loss  7.55 | ppl  1909.182
+| epoch   2 step   173000 |  23957 batches | lr 0.000237 | ms/batch 2570.48 | loss  7.55 | ppl  1909.420
+| epoch   2 step   173200 |  24157 batches | lr 0.000237 | ms/batch 2340.37 | loss  7.56 | ppl  1925.987
+| epoch   2 step   173400 |  24357 batches | lr 0.000237 | ms/batch 2316.29 | loss  7.55 | ppl  1908.392
+| epoch   2 step   173600 |  24557 batches | lr 0.000237 | ms/batch 2541.57 | loss  7.56 | ppl  1913.937
+| epoch   2 step   173800 |  24757 batches | lr 0.000237 | ms/batch 2342.37 | loss  7.56 | ppl  1924.507
+| epoch   2 step   174000 |  24957 batches | lr 0.000237 | ms/batch 2346.36 | loss  7.55 | ppl  1910.168
+| epoch   2 step   174200 |  25157 batches | lr 0.000237 | ms/batch 2340.76 | loss  7.56 | ppl  1920.072
+| epoch   2 step   174400 |  25357 batches | lr 0.000237 | ms/batch 2539.05 | loss  7.56 | ppl  1910.369
+| epoch   2 step   174600 |  25557 batches | lr 0.000237 | ms/batch 2353.89 | loss  7.56 | ppl  1922.918
+| epoch   2 step   174800 |  25757 batches | lr 0.000237 | ms/batch 2349.68 | loss  7.56 | ppl  1911.206
+| epoch   2 step   175000 |  25957 batches | lr 0.000237 | ms/batch 2341.82 | loss  7.56 | ppl  1922.078
+| epoch   2 step   175200 |  26157 batches | lr 0.000237 | ms/batch 2561.15 | loss  7.55 | ppl  1894.137
+| epoch   2 step   175400 |  26357 batches | lr 0.000237 | ms/batch 2345.07 | loss  7.56 | ppl  1917.118
+| epoch   2 step   175600 |  26557 batches | lr 0.000237 | ms/batch 2341.28 | loss  7.55 | ppl  1904.417
+| epoch   2 step   175800 |  26757 batches | lr 0.000237 | ms/batch 2540.77 | loss  7.55 | ppl  1908.336
+| epoch   2 step   176000 |  26957 batches | lr 0.000237 | ms/batch 2343.68 | loss  7.55 | ppl  1909.030
+----------------------------------------------------------------------------------------------------
+| Eval  44 at step   176000 | time: 10378.66s | valid loss  8.47 | valid ppl  4760.066
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   176200 |  27157 batches | lr 0.000237 | ms/batch 6120.15 | loss  7.55 | ppl  1909.636
+| epoch   2 step   176400 |  27357 batches | lr 0.000237 | ms/batch 2537.24 | loss  7.56 | ppl  1913.684
+| epoch   2 step   176600 |  27557 batches | lr 0.000237 | ms/batch 2347.15 | loss  7.56 | ppl  1916.141
+| epoch   2 step   176800 |  27757 batches | lr 0.000237 | ms/batch 2345.59 | loss  7.56 | ppl  1913.123
+| epoch   2 step   177000 |  27957 batches | lr 0.000237 | ms/batch 2332.17 | loss  7.56 | ppl  1914.826
+| epoch   2 step   177200 |  28157 batches | lr 0.000237 | ms/batch 2526.98 | loss  7.56 | ppl  1923.784
+| epoch   2 step   177400 |  28357 batches | lr 0.000237 | ms/batch 2331.97 | loss  7.55 | ppl  1910.126
+| epoch   2 step   177600 |  28557 batches | lr 0.000237 | ms/batch 2341.38 | loss  7.55 | ppl  1909.398
+| epoch   2 step   177800 |  28757 batches | lr 0.000237 | ms/batch 2532.83 | loss  7.55 | ppl  1909.373
+| epoch   2 step   178000 |  28957 batches | lr 0.000237 | ms/batch 2330.00 | loss  7.56 | ppl  1912.640
+| epoch   2 step   178200 |  29157 batches | lr 0.000237 | ms/batch 2336.82 | loss  7.55 | ppl  1909.073
+| epoch   2 step   178400 |  29357 batches | lr 0.000237 | ms/batch 2561.83 | loss  7.56 | ppl  1917.849
+| epoch   2 step   178600 |  29557 batches | lr 0.000237 | ms/batch 2326.27 | loss  7.55 | ppl  1906.354
+| epoch   2 step   178800 |  29757 batches | lr 0.000237 | ms/batch 2325.26 | loss  7.56 | ppl  1910.969
+| epoch   2 step   179000 |  29957 batches | lr 0.000237 | ms/batch 2335.54 | loss  7.55 | ppl  1892.587
+| epoch   2 step   179200 |  30157 batches | lr 0.000236 | ms/batch 2532.10 | loss  7.55 | ppl  1907.677
+| epoch   2 step   179400 |  30357 batches | lr 0.000236 | ms/batch 2333.09 | loss  7.56 | ppl  1914.972
+| epoch   2 step   179600 |  30557 batches | lr 0.000236 | ms/batch 2330.81 | loss  7.55 | ppl  1902.732
+| epoch   2 step   179800 |  30757 batches | lr 0.000236 | ms/batch 2534.36 | loss  7.55 | ppl  1907.525
+| epoch   2 step   180000 |  30957 batches | lr 0.000236 | ms/batch 2329.68 | loss  7.55 | ppl  1909.776
+----------------------------------------------------------------------------------------------------
+| Eval  45 at step   180000 | time: 10318.84s | valid loss  8.47 | valid ppl  4760.015
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   180200 |  31157 batches | lr 0.000236 | ms/batch 6007.22 | loss  7.55 | ppl  1908.502
+| epoch   2 step   180400 |  31357 batches | lr 0.000236 | ms/batch 2340.85 | loss  7.56 | ppl  1920.059
+| epoch   2 step   180600 |  31557 batches | lr 0.000236 | ms/batch 2560.58 | loss  7.55 | ppl  1907.610
+| epoch   2 step   180800 |  31757 batches | lr 0.000236 | ms/batch 2330.01 | loss  7.56 | ppl  1920.638
+| epoch   2 step   181000 |  31957 batches | lr 0.000236 | ms/batch 2332.40 | loss  7.56 | ppl  1916.557
+| epoch   2 step   181200 |  32157 batches | lr 0.000236 | ms/batch 2541.92 | loss  7.56 | ppl  1926.075
+| epoch   2 step   181400 |  32357 batches | lr 0.000236 | ms/batch 2324.37 | loss  7.55 | ppl  1892.359
+| epoch   2 step   181600 |  32557 batches | lr 0.000236 | ms/batch 2323.67 | loss  7.55 | ppl  1898.148
+| epoch   2 step   181800 |  32757 batches | lr 0.000236 | ms/batch 2521.08 | loss  7.56 | ppl  1910.892
+| epoch   2 step   182000 |  32957 batches | lr 0.000236 | ms/batch 2331.96 | loss  7.55 | ppl  1902.722
+| epoch   2 step   182200 |  33157 batches | lr 0.000236 | ms/batch 2315.09 | loss  7.55 | ppl  1906.092
+| epoch   2 step   182400 |  33357 batches | lr 0.000236 | ms/batch 2313.05 | loss  7.56 | ppl  1914.223
+| epoch   2 step   182600 |  33557 batches | lr 0.000236 | ms/batch 2518.31 | loss  7.55 | ppl  1903.911
+| epoch   2 step   182800 |  33757 batches | lr 0.000236 | ms/batch 2332.96 | loss  7.56 | ppl  1914.128
+| epoch   2 step   183000 |  33957 batches | lr 0.000236 | ms/batch 2333.25 | loss  7.56 | ppl  1917.332
+| epoch   2 step   183200 |  34157 batches | lr 0.000236 | ms/batch 2542.41 | loss  7.55 | ppl  1907.166
+| epoch   2 step   183400 |  34357 batches | lr 0.000236 | ms/batch 2333.43 | loss  7.56 | ppl  1912.392
+| epoch   2 step   183600 |  34557 batches | lr 0.000236 | ms/batch 2334.13 | loss  7.56 | ppl  1918.952
+| epoch   2 step   183800 |  34757 batches | lr 0.000236 | ms/batch 2331.58 | loss  7.56 | ppl  1922.236
+| epoch   2 step   184000 |  34957 batches | lr 0.000236 | ms/batch 2536.12 | loss  7.55 | ppl  1907.210
+----------------------------------------------------------------------------------------------------
+| Eval  46 at step   184000 | time: 10286.89s | valid loss  8.46 | valid ppl  4739.915
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   184200 |  35157 batches | lr 0.000236 | ms/batch 5928.80 | loss  7.55 | ppl  1901.965
+| epoch   2 step   184400 |  35357 batches | lr 0.000236 | ms/batch 2310.63 | loss  7.56 | ppl  1915.967
+| epoch   2 step   184600 |  35557 batches | lr 0.000236 | ms/batch 2530.58 | loss  7.56 | ppl  1916.324
+| epoch   2 step   184800 |  35757 batches | lr 0.000236 | ms/batch 2334.63 | loss  7.55 | ppl  1903.679
+| epoch   2 step   185000 |  35957 batches | lr 0.000236 | ms/batch 2341.41 | loss  7.56 | ppl  1911.593
+| epoch   2 step   185200 |  36157 batches | lr 0.000236 | ms/batch 2527.67 | loss  7.55 | ppl  1905.533
+| epoch   2 step   185400 |  36357 batches | lr 0.000236 | ms/batch 2332.43 | loss  7.55 | ppl  1908.875
+| epoch   2 step   185600 |  36557 batches | lr 0.000236 | ms/batch 2347.57 | loss  7.56 | ppl  1911.700
+| epoch   2 step   185800 |  36757 batches | lr 0.000236 | ms/batch 2342.91 | loss  7.56 | ppl  1915.898
+| epoch   2 step   186000 |  36957 batches | lr 0.000235 | ms/batch 2544.58 | loss  7.56 | ppl  1918.350
+| epoch   2 step   186200 |  37157 batches | lr 0.000235 | ms/batch 2336.22 | loss  7.55 | ppl  1909.013
+| epoch   2 step   186400 |  37357 batches | lr 0.000235 | ms/batch 2338.55 | loss  7.56 | ppl  1918.185
+| epoch   2 step   186600 |  37557 batches | lr 0.000235 | ms/batch 2550.76 | loss  7.54 | ppl  1887.040
+| epoch   2 step   186800 |  37757 batches | lr 0.000235 | ms/batch 2312.25 | loss  7.56 | ppl  1919.290
+| epoch   2 step   187000 |  37957 batches | lr 0.000235 | ms/batch 2332.74 | loss  7.55 | ppl  1905.664
+| epoch   2 step   187200 |  38157 batches | lr 0.000235 | ms/batch 2530.29 | loss  7.56 | ppl  1910.615
+| epoch   2 step   187400 |  38357 batches | lr 0.000235 | ms/batch 2335.96 | loss  7.56 | ppl  1912.322
+| epoch   2 step   187600 |  38557 batches | lr 0.000235 | ms/batch 2335.11 | loss  7.56 | ppl  1911.808
+| epoch   2 step   187800 |  38757 batches | lr 0.000235 | ms/batch 2333.72 | loss  7.56 | ppl  1914.382
+| epoch   2 step   188000 |  38957 batches | lr 0.000235 | ms/batch 2533.56 | loss  7.55 | ppl  1905.533
+----------------------------------------------------------------------------------------------------
+| Eval  47 at step   188000 | time: 10319.04s | valid loss  8.46 | valid ppl  4725.520
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   188200 |  39157 batches | lr 0.000235 | ms/batch 6054.81 | loss  7.55 | ppl  1907.369
+| epoch   2 step   188400 |  39357 batches | lr 0.000235 | ms/batch 2337.60 | loss  7.55 | ppl  1898.835
+| epoch   2 step   188600 |  39557 batches | lr 0.000235 | ms/batch 2557.74 | loss  7.56 | ppl  1921.757
+| epoch   2 step   188800 |  39757 batches | lr 0.000235 | ms/batch 2308.14 | loss  7.56 | ppl  1925.337
+| epoch   2 step   189000 |  39957 batches | lr 0.000235 | ms/batch 2331.07 | loss  7.55 | ppl  1909.148
+| epoch   2 step   189200 |  40157 batches | lr 0.000235 | ms/batch 2338.32 | loss  7.56 | ppl  1913.155
+| epoch   2 step   189400 |  40357 batches | lr 0.000235 | ms/batch 2553.44 | loss  7.55 | ppl  1907.573
+| epoch   2 step   189600 |  40557 batches | lr 0.000235 | ms/batch 2336.05 | loss  7.56 | ppl  1917.695
+| epoch   2 step   189800 |  40757 batches | lr 0.000235 | ms/batch 2330.41 | loss  7.56 | ppl  1910.454
+| epoch   2 step   190000 |  40957 batches | lr 0.000235 | ms/batch 2536.87 | loss  7.56 | ppl  1921.547
+| epoch   2 step   190200 |  41157 batches | lr 0.000235 | ms/batch 2339.25 | loss  7.55 | ppl  1909.424
+| epoch   2 step   190400 |  41357 batches | lr 0.000235 | ms/batch 2331.94 | loss  7.56 | ppl  1923.015
+| epoch   2 step   190600 |  41557 batches | lr 0.000235 | ms/batch 2524.35 | loss  7.55 | ppl  1910.030
+| epoch   2 step   190800 |  41757 batches | lr 0.000235 | ms/batch 2333.75 | loss  7.55 | ppl  1902.876
+| epoch   2 step   191000 |  41957 batches | lr 0.000235 | ms/batch 2336.74 | loss  7.55 | ppl  1906.638
+| epoch   2 step   191200 |  42157 batches | lr 0.000235 | ms/batch 2308.10 | loss  7.56 | ppl  1914.326
+| epoch   2 step   191400 |  42357 batches | lr 0.000235 | ms/batch 2552.19 | loss  7.55 | ppl  1908.747
+| epoch   2 step   191600 |  42557 batches | lr 0.000235 | ms/batch 2336.93 | loss  7.55 | ppl  1907.226
+| epoch   2 step   191800 |  42757 batches | lr 0.000235 | ms/batch 2341.55 | loss  7.56 | ppl  1924.462
+| epoch   2 step   192000 |  42957 batches | lr 0.000235 | ms/batch 2562.39 | loss  7.56 | ppl  1913.988
+----------------------------------------------------------------------------------------------------
+| Eval  48 at step   192000 | time: 10326.47s | valid loss  8.45 | valid ppl  4682.473
+----------------------------------------------------------------------------------------------------
+| epoch   2 step   192200 |  43157 batches | lr 0.000235 | ms/batch 6044.22 | loss  7.56 | ppl  1915.197
+| epoch   2 step   192400 |  43357 batches | lr 0.000234 | ms/batch 2335.54 | loss  7.56 | ppl  1913.257
+| epoch   2 step   192600 |  43557 batches | lr 0.000234 | ms/batch 2525.05 | loss  7.55 | ppl  1903.367
+| epoch   2 step   192800 |  43757 batches | lr 0.000234 | ms/batch 2334.06 | loss  7.56 | ppl  1913.449
+| epoch   2 step   193000 |  43957 batches | lr 0.000234 | ms/batch 2337.07 | loss  7.55 | ppl  1903.016
+| epoch   2 step   193200 |  44157 batches | lr 0.000234 | ms/batch 2320.82 | loss  7.57 | ppl  1937.382
+| epoch   2 step   193400 |  44357 batches | lr 0.000234 | ms/batch 2511.46 | loss  7.56 | ppl  1911.670
+| epoch   2 step   193600 |  44557 batches | lr 0.000234 | ms/batch 2336.57 | loss  7.55 | ppl  1905.630
+| epoch   2 step   193800 |  44757 batches | lr 0.000234 | ms/batch 2343.11 | loss  7.55 | ppl  1904.230
+| epoch   2 step   194000 |  44957 batches | lr 0.000234 | ms/batch 2563.53 | loss  7.56 | ppl  1925.500
+| epoch   3 step   194200 |    114 batches | lr 0.000234 | ms/batch 2345.76 | loss  7.55 | ppl  1901.680
+| epoch   3 step   194400 |    314 batches | lr 0.000234 | ms/batch 2339.81 | loss  7.55 | ppl  1908.364
+| epoch   3 step   194600 |    514 batches | lr 0.000234 | ms/batch 2343.17 | loss  7.55 | ppl  1908.512
+| epoch   3 step   194800 |    714 batches | lr 0.000234 | ms/batch 2559.92 | loss  7.56 | ppl  1915.404
+| epoch   3 step   195000 |    914 batches | lr 0.000234 | ms/batch 2335.44 | loss  7.55 | ppl  1909.220
+| epoch   3 step   195200 |   1114 batches | lr 0.000234 | ms/batch 2341.53 | loss  7.55 | ppl  1904.877
+| epoch   3 step   195400 |   1314 batches | lr 0.000234 | ms/batch 2547.26 | loss  7.56 | ppl  1911.392
+| epoch   3 step   195600 |   1514 batches | lr 0.000234 | ms/batch 2311.67 | loss  7.55 | ppl  1905.945
+| epoch   3 step   195800 |   1714 batches | lr 0.000234 | ms/batch 2319.98 | loss  7.56 | ppl  1914.381
+| epoch   3 step   196000 |   1914 batches | lr 0.000234 | ms/batch 2546.62 | loss  7.56 | ppl  1914.342
+----------------------------------------------------------------------------------------------------
+| Eval  49 at step   196000 | time: 10320.29s | valid loss  8.45 | valid ppl  4684.425
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   196200 |   2114 batches | lr 0.000234 | ms/batch 5990.53 | loss  7.55 | ppl  1908.178
+| epoch   3 step   196400 |   2314 batches | lr 0.000234 | ms/batch 2330.22 | loss  7.55 | ppl  1907.905
+| epoch   3 step   196600 |   2514 batches | lr 0.000234 | ms/batch 2341.75 | loss  7.56 | ppl  1911.504
+| epoch   3 step   196800 |   2714 batches | lr 0.000234 | ms/batch 2549.77 | loss  7.56 | ppl  1911.938
+| epoch   3 step   197000 |   2914 batches | lr 0.000234 | ms/batch 2329.27 | loss  7.56 | ppl  1911.269
+| epoch   3 step   197200 |   3114 batches | lr 0.000234 | ms/batch 2331.71 | loss  7.56 | ppl  1914.738
+| epoch   3 step   197400 |   3314 batches | lr 0.000234 | ms/batch 2548.64 | loss  7.55 | ppl  1904.614
+| epoch   3 step   197600 |   3514 batches | lr 0.000234 | ms/batch 2320.55 | loss  7.56 | ppl  1911.798
+| epoch   3 step   197800 |   3714 batches | lr 0.000234 | ms/batch 2309.36 | loss  7.55 | ppl  1908.633
+| epoch   3 step   198000 |   3914 batches | lr 0.000234 | ms/batch 2332.85 | loss  7.56 | ppl  1922.640
+| epoch   3 step   198200 |   4114 batches | lr 0.000234 | ms/batch 2546.87 | loss  7.55 | ppl  1908.020
+| epoch   3 step   198400 |   4314 batches | lr 0.000234 | ms/batch 2334.56 | loss  7.56 | ppl  1911.370
+| epoch   3 step   198600 |   4514 batches | lr 0.000233 | ms/batch 2329.44 | loss  7.56 | ppl  1919.647
+| epoch   3 step   198800 |   4714 batches | lr 0.000233 | ms/batch 2549.41 | loss  7.55 | ppl  1901.099
+| epoch   3 step   199000 |   4914 batches | lr 0.000233 | ms/batch 2336.94 | loss  7.55 | ppl  1909.159
+| epoch   3 step   199200 |   5114 batches | lr 0.000233 | ms/batch 2332.21 | loss  7.56 | ppl  1929.423
+| epoch   3 step   199400 |   5314 batches | lr 0.000233 | ms/batch 2548.24 | loss  7.55 | ppl  1906.930
+| epoch   3 step   199600 |   5514 batches | lr 0.000233 | ms/batch 2342.02 | loss  7.56 | ppl  1912.680
+| epoch   3 step   199800 |   5714 batches | lr 0.000233 | ms/batch 2340.66 | loss  7.55 | ppl  1895.575
+| epoch   3 step   200000 |   5914 batches | lr 0.000233 | ms/batch 2325.24 | loss  7.55 | ppl  1904.144
+----------------------------------------------------------------------------------------------------
+| Eval  50 at step   200000 | time: 10298.49s | valid loss  8.47 | valid ppl  4763.261
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   200200 |   6114 batches | lr 0.000233 | ms/batch 6325.97 | loss  7.55 | ppl  1909.369
+| epoch   3 step   200400 |   6314 batches | lr 0.000233 | ms/batch 2342.78 | loss  7.56 | ppl  1922.494
+| epoch   3 step   200600 |   6514 batches | lr 0.000233 | ms/batch 2339.00 | loss  7.56 | ppl  1918.891
+| epoch   3 step   200800 |   6714 batches | lr 0.000233 | ms/batch 2549.20 | loss  7.55 | ppl  1909.977
+| epoch   3 step   201000 |   6914 batches | lr 0.000233 | ms/batch 2344.28 | loss  7.55 | ppl  1902.962
+| epoch   3 step   201200 |   7114 batches | lr 0.000233 | ms/batch 2340.42 | loss  7.55 | ppl  1905.498
+| epoch   3 step   201400 |   7314 batches | lr 0.000233 | ms/batch 2554.12 | loss  7.55 | ppl  1901.997
+| epoch   3 step   201600 |   7514 batches | lr 0.000233 | ms/batch 2334.58 | loss  7.56 | ppl  1910.567
+| epoch   3 step   201800 |   7714 batches | lr 0.000233 | ms/batch 2338.83 | loss  7.56 | ppl  1924.872
+| epoch   3 step   202000 |   7914 batches | lr 0.000233 | ms/batch 2335.24 | loss  7.55 | ppl  1899.152
+| epoch   3 step   202200 |   8114 batches | lr 0.000233 | ms/batch 2532.42 | loss  7.56 | ppl  1913.048
+| epoch   3 step   202400 |   8314 batches | lr 0.000233 | ms/batch 2339.13 | loss  7.56 | ppl  1920.783
+| epoch   3 step   202600 |   8514 batches | lr 0.000233 | ms/batch 2339.97 | loss  7.56 | ppl  1913.168
+| epoch   3 step   202800 |   8714 batches | lr 0.000233 | ms/batch 2560.28 | loss  7.55 | ppl  1905.684
+| epoch   3 step   203000 |   8914 batches | lr 0.000233 | ms/batch 2339.67 | loss  7.55 | ppl  1905.755
+| epoch   3 step   203200 |   9114 batches | lr 0.000233 | ms/batch 2339.47 | loss  7.55 | ppl  1898.285
+| epoch   3 step   203400 |   9314 batches | lr 0.000233 | ms/batch 2344.72 | loss  7.56 | ppl  1911.140
+| epoch   3 step   203600 |   9514 batches | lr 0.000233 | ms/batch 2561.51 | loss  7.55 | ppl  1908.453
+| epoch   3 step   203800 |   9714 batches | lr 0.000233 | ms/batch 2338.55 | loss  7.56 | ppl  1920.650
+| epoch   3 step   204000 |   9914 batches | lr 0.000233 | ms/batch 2341.87 | loss  7.55 | ppl  1909.182
+----------------------------------------------------------------------------------------------------
+| Eval  51 at step   204000 | time: 10367.51s | valid loss  8.45 | valid ppl  4681.952
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   204200 |  10114 batches | lr 0.000233 | ms/batch 6285.09 | loss  7.55 | ppl  1907.128
+| epoch   3 step   204400 |  10314 batches | lr 0.000233 | ms/batch 2337.19 | loss  7.55 | ppl  1905.627
+| epoch   3 step   204600 |  10514 batches | lr 0.000232 | ms/batch 2339.70 | loss  7.55 | ppl  1904.987
+| epoch   3 step   204800 |  10714 batches | lr 0.000232 | ms/batch 2564.80 | loss  7.55 | ppl  1896.489
+| epoch   3 step   205000 |  10914 batches | lr 0.000232 | ms/batch 2337.87 | loss  7.55 | ppl  1905.017
+| epoch   3 step   205200 |  11114 batches | lr 0.000232 | ms/batch 2336.96 | loss  7.55 | ppl  1902.507
+| epoch   3 step   205400 |  11314 batches | lr 0.000232 | ms/batch 2345.38 | loss  7.56 | ppl  1924.892
+| epoch   3 step   205600 |  11514 batches | lr 0.000232 | ms/batch 2566.85 | loss  7.55 | ppl  1910.169
+| epoch   3 step   205800 |  11714 batches | lr 0.000232 | ms/batch 2338.62 | loss  7.56 | ppl  1913.529
+| epoch   3 step   206000 |  11914 batches | lr 0.000232 | ms/batch 2337.57 | loss  7.55 | ppl  1907.292
+| epoch   3 step   206200 |  12114 batches | lr 0.000232 | ms/batch 2557.58 | loss  7.55 | ppl  1905.545
+| epoch   3 step   206400 |  12314 batches | lr 0.000232 | ms/batch 2344.52 | loss  7.55 | ppl  1900.604
+| epoch   3 step   206600 |  12514 batches | lr 0.000232 | ms/batch 2306.97 | loss  7.55 | ppl  1906.617
+| epoch   3 step   206800 |  12714 batches | lr 0.000232 | ms/batch 2437.56 | loss  7.56 | ppl  1911.989
+| epoch   3 step   207000 |  12914 batches | lr 0.000232 | ms/batch 2216.23 | loss  7.55 | ppl  1909.883
+| epoch   3 step   207200 |  13114 batches | lr 0.000232 | ms/batch 2214.86 | loss  7.56 | ppl  1915.897
+| epoch   3 step   207400 |  13314 batches | lr 0.000232 | ms/batch 2256.14 | loss  7.55 | ppl  1909.161
+| epoch   3 step   207600 |  13514 batches | lr 0.000232 | ms/batch 2433.12 | loss  7.55 | ppl  1906.565
+| epoch   3 step   207800 |  13714 batches | lr 0.000232 | ms/batch 2215.28 | loss  7.55 | ppl  1898.605
+| epoch   3 step   208000 |  13914 batches | lr 0.000232 | ms/batch 2215.71 | loss  7.56 | ppl  1920.624
+----------------------------------------------------------------------------------------------------
+| Eval  52 at step   208000 | time: 10177.02s | valid loss  8.46 | valid ppl  4704.173
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   208200 |  14114 batches | lr 0.000232 | ms/batch 6108.40 | loss  7.56 | ppl  1917.906
+| epoch   3 step   208400 |  14314 batches | lr 0.000232 | ms/batch 2217.38 | loss  7.55 | ppl  1892.621
+| epoch   3 step   208600 |  14514 batches | lr 0.000232 | ms/batch 2215.40 | loss  7.55 | ppl  1909.749
+| epoch   3 step   208800 |  14714 batches | lr 0.000232 | ms/batch 2215.12 | loss  7.55 | ppl  1909.168
+| epoch   3 step   209000 |  14914 batches | lr 0.000232 | ms/batch 2432.16 | loss  7.56 | ppl  1914.884
+| epoch   3 step   209200 |  15114 batches | lr 0.000232 | ms/batch 2234.13 | loss  7.55 | ppl  1910.064
+| epoch   3 step   209400 |  15314 batches | lr 0.000232 | ms/batch 2234.86 | loss  7.55 | ppl  1908.368
+| epoch   3 step   209600 |  15514 batches | lr 0.000232 | ms/batch 2454.80 | loss  7.56 | ppl  1915.953
+| epoch   3 step   209800 |  15714 batches | lr 0.000232 | ms/batch 2236.78 | loss  7.56 | ppl  1911.545
+| epoch   3 step   210000 |  15914 batches | lr 0.000232 | ms/batch 2233.10 | loss  7.56 | ppl  1910.634
+| epoch   3 step   210200 |  16114 batches | lr 0.000232 | ms/batch 2235.72 | loss  7.56 | ppl  1914.545
+| epoch   3 step   210400 |  16314 batches | lr 0.000232 | ms/batch 2457.87 | loss  7.56 | ppl  1911.430
+| epoch   3 step   210600 |  16514 batches | lr 0.000231 | ms/batch 2236.23 | loss  7.55 | ppl  1899.257
+| epoch   3 step   210800 |  16714 batches | lr 0.000231 | ms/batch 2236.14 | loss  7.55 | ppl  1900.999
+| epoch   3 step   211000 |  16914 batches | lr 0.000231 | ms/batch 2455.30 | loss  7.55 | ppl  1909.561
+| epoch   3 step   211200 |  17114 batches | lr 0.000231 | ms/batch 2236.47 | loss  7.56 | ppl  1922.174
+| epoch   3 step   211400 |  17314 batches | lr 0.000231 | ms/batch 2236.89 | loss  7.55 | ppl  1907.889
+| epoch   3 step   211600 |  17514 batches | lr 0.000231 | ms/batch 2463.00 | loss  7.55 | ppl  1901.011
+| epoch   3 step   211800 |  17714 batches | lr 0.000231 | ms/batch 2233.71 | loss  7.56 | ppl  1911.890
+| epoch   3 step   212000 |  17914 batches | lr 0.000231 | ms/batch 2232.89 | loss  7.55 | ppl  1904.251
+----------------------------------------------------------------------------------------------------
+| Eval  53 at step   212000 | time: 9932.17s | valid loss  8.46 | valid ppl  4713.373
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   212200 |  18114 batches | lr 0.000231 | ms/batch 6178.78 | loss  7.56 | ppl  1910.374
+| epoch   3 step   212400 |  18314 batches | lr 0.000231 | ms/batch 2234.13 | loss  7.55 | ppl  1903.851
+| epoch   3 step   212600 |  18514 batches | lr 0.000231 | ms/batch 2234.55 | loss  7.55 | ppl  1903.589
+| epoch   3 step   212800 |  18714 batches | lr 0.000231 | ms/batch 2236.02 | loss  7.56 | ppl  1913.752
+| epoch   3 step   213000 |  18914 batches | lr 0.000231 | ms/batch 2455.17 | loss  7.56 | ppl  1918.196
+| epoch   3 step   213200 |  19114 batches | lr 0.000231 | ms/batch 2236.32 | loss  7.55 | ppl  1898.427
+| epoch   3 step   213400 |  19314 batches | lr 0.000231 | ms/batch 2234.70 | loss  7.56 | ppl  1917.239
+| epoch   3 step   213600 |  19514 batches | lr 0.000231 | ms/batch 2233.00 | loss  7.55 | ppl  1907.016
+| epoch   3 step   213800 |  19714 batches | lr 0.000231 | ms/batch 2456.28 | loss  7.56 | ppl  1920.738
+| epoch   3 step   214000 |  19914 batches | lr 0.000231 | ms/batch 2234.87 | loss  7.55 | ppl  1907.624
+| epoch   3 step   214200 |  20114 batches | lr 0.000231 | ms/batch 2233.78 | loss  7.55 | ppl  1908.413
+| epoch   3 step   214400 |  20314 batches | lr 0.000231 | ms/batch 2453.30 | loss  7.56 | ppl  1913.350
+| epoch   3 step   214600 |  20514 batches | lr 0.000231 | ms/batch 2233.97 | loss  7.55 | ppl  1906.627
+| epoch   3 step   214800 |  20714 batches | lr 0.000231 | ms/batch 2236.52 | loss  7.55 | ppl  1904.025
+| epoch   3 step   215000 |  20914 batches | lr 0.000231 | ms/batch 2448.70 | loss  7.55 | ppl  1903.992
+| epoch   3 step   215200 |  21114 batches | lr 0.000231 | ms/batch 2233.07 | loss  7.56 | ppl  1915.435
+| epoch   3 step   215400 |  21314 batches | lr 0.000231 | ms/batch 2231.28 | loss  7.56 | ppl  1915.874
+| epoch   3 step   215600 |  21514 batches | lr 0.000231 | ms/batch 2230.44 | loss  7.55 | ppl  1904.780
+| epoch   3 step   215800 |  21714 batches | lr 0.000231 | ms/batch 2452.52 | loss  7.56 | ppl  1910.480
+| epoch   3 step   216000 |  21914 batches | lr 0.000231 | ms/batch 2231.78 | loss  7.55 | ppl  1910.203
+----------------------------------------------------------------------------------------------------
+| Eval  54 at step   216000 | time: 9951.97s | valid loss  8.46 | valid ppl  4721.839
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   216200 |  22114 batches | lr 0.000231 | ms/batch 5996.18 | loss  7.55 | ppl  1899.638
+| epoch   3 step   216400 |  22314 batches | lr 0.00023 | ms/batch 2447.77 | loss  7.56 | ppl  1913.410
+| epoch   3 step   216600 |  22514 batches | lr 0.00023 | ms/batch 2232.46 | loss  7.56 | ppl  1921.367
+| epoch   3 step   216800 |  22714 batches | lr 0.00023 | ms/batch 2232.83 | loss  7.56 | ppl  1916.043
+| epoch   3 step   217000 |  22914 batches | lr 0.00023 | ms/batch 2455.55 | loss  7.56 | ppl  1914.449
+| epoch   3 step   217200 |  23114 batches | lr 0.00023 | ms/batch 2250.65 | loss  7.56 | ppl  1917.623
+| epoch   3 step   217400 |  23314 batches | lr 0.00023 | ms/batch 2337.99 | loss  7.55 | ppl  1905.611
+| epoch   3 step   217600 |  23514 batches | lr 0.00023 | ms/batch 2551.66 | loss  7.55 | ppl  1894.782
+| epoch   3 step   217800 |  23714 batches | lr 0.00023 | ms/batch 2341.35 | loss  7.55 | ppl  1905.758
+| epoch   3 step   218000 |  23914 batches | lr 0.00023 | ms/batch 2337.74 | loss  7.55 | ppl  1909.499
+| epoch   3 step   218200 |  24114 batches | lr 0.00023 | ms/batch 2337.19 | loss  7.56 | ppl  1914.512
+| epoch   3 step   218400 |  24314 batches | lr 0.00023 | ms/batch 2557.52 | loss  7.55 | ppl  1907.754
+| epoch   3 step   218600 |  24514 batches | lr 0.00023 | ms/batch 2344.67 | loss  7.56 | ppl  1921.203
+| epoch   3 step   218800 |  24714 batches | lr 0.00023 | ms/batch 2335.63 | loss  7.56 | ppl  1912.810
+| epoch   3 step   219000 |  24914 batches | lr 0.00023 | ms/batch 2339.38 | loss  7.56 | ppl  1918.813
+| epoch   3 step   219200 |  25114 batches | lr 0.00023 | ms/batch 2552.11 | loss  7.56 | ppl  1918.420
+| epoch   3 step   219400 |  25314 batches | lr 0.00023 | ms/batch 2337.84 | loss  7.56 | ppl  1917.664
+| epoch   3 step   219600 |  25514 batches | lr 0.00023 | ms/batch 2310.08 | loss  7.55 | ppl  1906.343
+| epoch   3 step   219800 |  25714 batches | lr 0.00023 | ms/batch 2555.28 | loss  7.55 | ppl  1903.281
+| epoch   3 step   220000 |  25914 batches | lr 0.00023 | ms/batch 2335.46 | loss  7.56 | ppl  1911.531
+----------------------------------------------------------------------------------------------------
+| Eval  55 at step   220000 | time: 10239.21s | valid loss  8.46 | valid ppl  4727.736
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   220200 |  26114 batches | lr 0.00023 | ms/batch 6109.06 | loss  7.56 | ppl  1912.139
+| epoch   3 step   220400 |  26314 batches | lr 0.00023 | ms/batch 2565.52 | loss  7.55 | ppl  1906.379
+| epoch   3 step   220600 |  26514 batches | lr 0.00023 | ms/batch 2343.67 | loss  7.55 | ppl  1909.982
+| epoch   3 step   220800 |  26714 batches | lr 0.00023 | ms/batch 2337.21 | loss  7.56 | ppl  1928.234
+| epoch   3 step   221000 |  26914 batches | lr 0.00023 | ms/batch 2335.58 | loss  7.55 | ppl  1905.596
+| epoch   3 step   221200 |  27114 batches | lr 0.00023 | ms/batch 2563.78 | loss  7.56 | ppl  1919.773
+| epoch   3 step   221400 |  27314 batches | lr 0.00023 | ms/batch 2340.59 | loss  7.55 | ppl  1903.735
+| epoch   3 step   221600 |  27514 batches | lr 0.00023 | ms/batch 2315.36 | loss  7.56 | ppl  1919.400
+| epoch   3 step   221800 |  27714 batches | lr 0.00023 | ms/batch 2548.11 | loss  7.55 | ppl  1909.565
+| epoch   3 step   222000 |  27914 batches | lr 0.000229 | ms/batch 2337.64 | loss  7.55 | ppl  1909.447
+| epoch   3 step   222200 |  28114 batches | lr 0.000229 | ms/batch 2341.42 | loss  7.56 | ppl  1915.436
+| epoch   3 step   222400 |  28314 batches | lr 0.000229 | ms/batch 2558.61 | loss  7.55 | ppl  1906.241
+| epoch   3 step   222600 |  28514 batches | lr 0.000229 | ms/batch 2333.35 | loss  7.56 | ppl  1916.523
+| epoch   3 step   222800 |  28714 batches | lr 0.000229 | ms/batch 2341.18 | loss  7.55 | ppl  1903.761
+| epoch   3 step   223000 |  28914 batches | lr 0.000229 | ms/batch 2344.87 | loss  7.56 | ppl  1915.627
+| epoch   3 step   223200 |  29114 batches | lr 0.000229 | ms/batch 2554.12 | loss  7.55 | ppl  1897.933
+| epoch   3 step   223400 |  29314 batches | lr 0.000229 | ms/batch 2337.45 | loss  7.55 | ppl  1908.990
+| epoch   3 step   223600 |  29514 batches | lr 0.000229 | ms/batch 2340.10 | loss  7.56 | ppl  1917.927
+| epoch   3 step   223800 |  29714 batches | lr 0.000229 | ms/batch 2558.85 | loss  7.57 | ppl  1929.901
+| epoch   3 step   224000 |  29914 batches | lr 0.000229 | ms/batch 2315.08 | loss  7.56 | ppl  1919.456
+----------------------------------------------------------------------------------------------------
+| Eval  56 at step   224000 | time: 10356.72s | valid loss  8.46 | valid ppl  4725.072
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   224200 |  30114 batches | lr 0.000229 | ms/batch 6070.18 | loss  7.55 | ppl  1897.180
+| epoch   3 step   224400 |  30314 batches | lr 0.000229 | ms/batch 2341.92 | loss  7.55 | ppl  1910.208
+| epoch   3 step   224600 |  30514 batches | lr 0.000229 | ms/batch 2561.63 | loss  7.55 | ppl  1906.510
+| epoch   3 step   224800 |  30714 batches | lr 0.000229 | ms/batch 2333.87 | loss  7.55 | ppl  1902.598
+| epoch   3 step   225000 |  30914 batches | lr 0.000229 | ms/batch 2346.81 | loss  7.55 | ppl  1907.114
+| epoch   3 step   225200 |  31114 batches | lr 0.000229 | ms/batch 2562.50 | loss  7.55 | ppl  1907.098
+| epoch   3 step   225400 |  31314 batches | lr 0.000229 | ms/batch 2333.63 | loss  7.55 | ppl  1908.849
+| epoch   3 step   225600 |  31514 batches | lr 0.000229 | ms/batch 2334.89 | loss  7.55 | ppl  1897.405
+| epoch   3 step   225800 |  31714 batches | lr 0.000229 | ms/batch 2556.79 | loss  7.56 | ppl  1916.473
+| epoch   3 step   226000 |  31914 batches | lr 0.000229 | ms/batch 2331.10 | loss  7.56 | ppl  1913.929
+| epoch   3 step   226200 |  32114 batches | lr 0.000229 | ms/batch 2309.35 | loss  7.55 | ppl  1905.951
+| epoch   3 step   226400 |  32314 batches | lr 0.000229 | ms/batch 2335.71 | loss  7.56 | ppl  1924.679
+| epoch   3 step   226600 |  32514 batches | lr 0.000229 | ms/batch 2556.22 | loss  7.56 | ppl  1911.016
+| epoch   3 step   226800 |  32714 batches | lr 0.000229 | ms/batch 2345.70 | loss  7.55 | ppl  1902.159
+| epoch   3 step   227000 |  32914 batches | lr 0.000229 | ms/batch 2339.17 | loss  7.56 | ppl  1918.494
+| epoch   3 step   227200 |  33114 batches | lr 0.000229 | ms/batch 2550.14 | loss  7.55 | ppl  1903.294
+| epoch   3 step   227400 |  33314 batches | lr 0.000228 | ms/batch 2345.64 | loss  7.56 | ppl  1921.867
+| epoch   3 step   227600 |  33514 batches | lr 0.000228 | ms/batch 2341.68 | loss  7.55 | ppl  1903.831
+| epoch   3 step   227800 |  33714 batches | lr 0.000228 | ms/batch 2334.02 | loss  7.55 | ppl  1906.807
+| epoch   3 step   228000 |  33914 batches | lr 0.000228 | ms/batch 2552.99 | loss  7.56 | ppl  1918.986
+----------------------------------------------------------------------------------------------------
+| Eval  57 at step   228000 | time: 10357.21s | valid loss  8.46 | valid ppl  4731.623
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   228200 |  34114 batches | lr 0.000228 | ms/batch 6048.71 | loss  7.55 | ppl  1904.936
+| epoch   3 step   228400 |  34314 batches | lr 0.000228 | ms/batch 2325.11 | loss  7.56 | ppl  1919.968
+| epoch   3 step   228600 |  34514 batches | lr 0.000228 | ms/batch 2561.75 | loss  7.55 | ppl  1906.509
+| epoch   3 step   228800 |  34714 batches | lr 0.000228 | ms/batch 2343.60 | loss  7.55 | ppl  1906.267
+| epoch   3 step   229000 |  34914 batches | lr 0.000228 | ms/batch 2335.91 | loss  7.56 | ppl  1914.427
+| epoch   3 step   229200 |  35114 batches | lr 0.000228 | ms/batch 2561.01 | loss  7.56 | ppl  1911.029
+| epoch   3 step   229400 |  35314 batches | lr 0.000228 | ms/batch 2340.32 | loss  7.55 | ppl  1909.583
+| epoch   3 step   229600 |  35514 batches | lr 0.000228 | ms/batch 2347.10 | loss  7.56 | ppl  1918.813
+| epoch   3 step   229800 |  35714 batches | lr 0.000228 | ms/batch 2335.18 | loss  7.56 | ppl  1918.672
+| epoch   3 step   230000 |  35914 batches | lr 0.000228 | ms/batch 2545.24 | loss  7.55 | ppl  1909.943
+| epoch   3 step   230200 |  36114 batches | lr 0.000228 | ms/batch 2330.53 | loss  7.56 | ppl  1910.945
+| epoch   3 step   230400 |  36314 batches | lr 0.000228 | ms/batch 2332.14 | loss  7.55 | ppl  1905.424
+| epoch   3 step   230600 |  36514 batches | lr 0.000228 | ms/batch 2520.56 | loss  7.56 | ppl  1913.995
+| epoch   3 step   230800 |  36714 batches | lr 0.000228 | ms/batch 2316.93 | loss  7.56 | ppl  1917.597
+| epoch   3 step   231000 |  36914 batches | lr 0.000228 | ms/batch 2329.91 | loss  7.55 | ppl  1909.122
+| epoch   3 step   231200 |  37114 batches | lr 0.000228 | ms/batch 2544.65 | loss  7.56 | ppl  1915.612
+| epoch   3 step   231400 |  37314 batches | lr 0.000228 | ms/batch 2328.72 | loss  7.56 | ppl  1923.364
+| epoch   3 step   231600 |  37514 batches | lr 0.000228 | ms/batch 2326.12 | loss  7.55 | ppl  1906.396
+| epoch   3 step   231800 |  37714 batches | lr 0.000228 | ms/batch 2333.67 | loss  7.55 | ppl  1904.095
+| epoch   3 step   232000 |  37914 batches | lr 0.000228 | ms/batch 2555.02 | loss  7.56 | ppl  1915.167
+----------------------------------------------------------------------------------------------------
+| Eval  58 at step   232000 | time: 10322.53s | valid loss  8.46 | valid ppl  4706.763
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   232200 |  38114 batches | lr 0.000228 | ms/batch 6011.86 | loss  7.55 | ppl  1909.341
+| epoch   3 step   232400 |  38314 batches | lr 0.000228 | ms/batch 2332.52 | loss  7.55 | ppl  1905.086
+| epoch   3 step   232600 |  38514 batches | lr 0.000228 | ms/batch 2534.96 | loss  7.56 | ppl  1927.358
+| epoch   3 step   232800 |  38714 batches | lr 0.000227 | ms/batch 2308.71 | loss  7.56 | ppl  1915.549
+| epoch   3 step   233000 |  38914 batches | lr 0.000227 | ms/batch 2332.24 | loss  7.55 | ppl  1908.563
+| epoch   3 step   233200 |  39114 batches | lr 0.000227 | ms/batch 2330.27 | loss  7.55 | ppl  1909.372
+| epoch   3 step   233400 |  39314 batches | lr 0.000227 | ms/batch 2549.93 | loss  7.55 | ppl  1910.248
+| epoch   3 step   233600 |  39514 batches | lr 0.000227 | ms/batch 2326.21 | loss  7.56 | ppl  1924.994
+| epoch   3 step   233800 |  39714 batches | lr 0.000227 | ms/batch 2328.44 | loss  7.55 | ppl  1909.368
+| epoch   3 step   234000 |  39914 batches | lr 0.000227 | ms/batch 2555.32 | loss  7.55 | ppl  1901.514
+| epoch   3 step   234200 |  40114 batches | lr 0.000227 | ms/batch 2332.93 | loss  7.55 | ppl  1909.416
+| epoch   3 step   234400 |  40314 batches | lr 0.000227 | ms/batch 2325.44 | loss  7.56 | ppl  1924.481
+| epoch   3 step   234600 |  40514 batches | lr 0.000227 | ms/batch 2546.42 | loss  7.56 | ppl  1927.096
+| epoch   3 step   234800 |  40714 batches | lr 0.000227 | ms/batch 2329.65 | loss  7.56 | ppl  1915.863
+| epoch   3 step   235000 |  40914 batches | lr 0.000227 | ms/batch 2320.95 | loss  7.56 | ppl  1911.602
+| epoch   3 step   235200 |  41114 batches | lr 0.000227 | ms/batch 2305.38 | loss  7.55 | ppl  1902.916
+| epoch   3 step   235400 |  41314 batches | lr 0.000227 | ms/batch 2542.76 | loss  7.55 | ppl  1905.422
+| epoch   3 step   235600 |  41514 batches | lr 0.000227 | ms/batch 2330.33 | loss  7.55 | ppl  1901.581
+| epoch   3 step   235800 |  41714 batches | lr 0.000227 | ms/batch 2338.63 | loss  7.55 | ppl  1906.299
+| epoch   3 step   236000 |  41914 batches | lr 0.000227 | ms/batch 2566.57 | loss  7.55 | ppl  1909.868
+----------------------------------------------------------------------------------------------------
+| Eval  59 at step   236000 | time: 10339.78s | valid loss  8.46 | valid ppl  4714.047
+----------------------------------------------------------------------------------------------------
+| epoch   3 step   236200 |  42114 batches | lr 0.000227 | ms/batch 6187.07 | loss  7.55 | ppl  1905.530
+| epoch   3 step   236400 |  42314 batches | lr 0.000227 | ms/batch 2342.28 | loss  7.56 | ppl  1921.432
+| epoch   3 step   236600 |  42514 batches | lr 0.000227 | ms/batch 2565.17 | loss  7.56 | ppl  1926.624
+| epoch   3 step   236800 |  42714 batches | lr 0.000227 | ms/batch 2344.10 | loss  7.56 | ppl  1919.123
+| epoch   3 step   237000 |  42914 batches | lr 0.000227 | ms/batch 2348.74 | loss  7.56 | ppl  1922.982
+| epoch   3 step   237200 |  43114 batches | lr 0.000227 | ms/batch 2322.55 | loss  7.55 | ppl  1905.251
+| epoch   3 step   237400 |  43314 batches | lr 0.000227 | ms/batch 2560.62 | loss  7.56 | ppl  1917.403
+| epoch   3 step   237600 |  43514 batches | lr 0.000227 | ms/batch 2345.18 | loss  7.56 | ppl  1911.910
+| epoch   3 step   237800 |  43714 batches | lr 0.000227 | ms/batch 2349.26 | loss  7.56 | ppl  1925.123
+| epoch   3 step   238000 |  43914 batches | lr 0.000227 | ms/batch 2569.04 | loss  7.55 | ppl  1906.763
+| epoch   3 step   238200 |  44114 batches | lr 0.000226 | ms/batch 2344.07 | loss  7.56 | ppl  1914.183
+| epoch   3 step   238400 |  44314 batches | lr 0.000226 | ms/batch 2354.70 | loss  7.55 | ppl  1908.414
+| epoch   3 step   238600 |  44514 batches | lr 0.000226 | ms/batch 2351.53 | loss  7.55 | ppl  1898.453
+| epoch   3 step   238800 |  44714 batches | lr 0.000226 | ms/batch 2567.33 | loss  7.55 | ppl  1907.213
+| epoch   3 step   239000 |  44914 batches | lr 0.000226 | ms/batch 2347.28 | loss  7.56 | ppl  1921.796
+| epoch   4 step   239200 |     71 batches | lr 0.000226 | ms/batch 2356.93 | loss  7.55 | ppl  1906.565
+| epoch   4 step   239400 |    271 batches | lr 0.000226 | ms/batch 2559.63 | loss  7.55 | ppl  1903.147
+| epoch   4 step   239600 |    471 batches | lr 0.000226 | ms/batch 2321.11 | loss  7.55 | ppl  1902.595
+| epoch   4 step   239800 |    671 batches | lr 0.000226 | ms/batch 2340.39 | loss  7.56 | ppl  1910.443
+| epoch   4 step   240000 |    871 batches | lr 0.000226 | ms/batch 2566.98 | loss  7.55 | ppl  1906.993
+----------------------------------------------------------------------------------------------------
+| Eval  60 at step   240000 | time: 10409.06s | valid loss  8.46 | valid ppl  4722.628
+----------------------------------------------------------------------------------------------------
+| epoch   4 step   240200 |   1071 batches | lr 0.000226 | ms/batch 6177.59 | loss  7.55 | ppl  1910.133
+| epoch   4 step   240400 |   1271 batches | lr 0.000226 | ms/batch 2345.55 | loss  7.56 | ppl  1913.171
+| epoch   4 step   240600 |   1471 batches | lr 0.000226 | ms/batch 2357.96 | loss  7.56 | ppl  1919.357
+| epoch   4 step   240800 |   1671 batches | lr 0.000226 | ms/batch 2572.57 | loss  7.56 | ppl  1922.334
+| epoch   4 step   241000 |   1871 batches | lr 0.000226 | ms/batch 2344.74 | loss  7.56 | ppl  1913.294
+| epoch   4 step   241200 |   2071 batches | lr 0.000226 | ms/batch 2345.38 | loss  7.55 | ppl  1895.140
+| epoch   4 step   241400 |   2271 batches | lr 0.000226 | ms/batch 2571.86 | loss  7.56 | ppl  1912.823
+| epoch   4 step   241600 |   2471 batches | lr 0.000226 | ms/batch 2334.89 | loss  7.55 | ppl  1907.396
+| epoch   4 step   241800 |   2671 batches | lr 0.000226 | ms/batch 2322.77 | loss  7.56 | ppl  1911.378
+| epoch   4 step   242000 |   2871 batches | lr 0.000226 | ms/batch 2578.13 | loss  7.55 | ppl  1902.217
+| epoch   4 step   242200 |   3071 batches | lr 0.000226 | ms/batch 2347.17 | loss  7.56 | ppl  1912.095
+| epoch   4 step   242400 |   3271 batches | lr 0.000226 | ms/batch 2351.10 | loss  7.55 | ppl  1903.701
+| epoch   4 step   242600 |   3471 batches | lr 0.000226 | ms/batch 2570.45 | loss  7.56 | ppl  1911.903
+| epoch   4 step   242800 |   3671 batches | lr 0.000226 | ms/batch 2344.31 | loss  7.56 | ppl  1913.045
+| epoch   4 step   243000 |   3871 batches | lr 0.000226 | ms/batch 2354.27 | loss  7.56 | ppl  1915.540
+| epoch   4 step   243200 |   4071 batches | lr 0.000226 | ms/batch 2348.78 | loss  7.56 | ppl  1920.524
+| epoch   4 step   243400 |   4271 batches | lr 0.000225 | ms/batch 2565.91 | loss  7.55 | ppl  1909.731
+| epoch   4 step   243600 |   4471 batches | lr 0.000225 | ms/batch 2350.14 | loss  7.55 | ppl  1905.118
+| epoch   4 step   243800 |   4671 batches | lr 0.000225 | ms/batch 2348.32 | loss  7.56 | ppl  1918.580
+| epoch   4 step   244000 |   4871 batches | lr 0.000225 | ms/batch 2338.78 | loss  7.56 | ppl  1913.758
+----------------------------------------------------------------------------------------------------
+| Eval  61 at step   244000 | time: 10374.62s | valid loss  8.46 | valid ppl  4712.883
+----------------------------------------------------------------------------------------------------
+| epoch   4 step   244200 |   5071 batches | lr 0.000225 | ms/batch 6392.31 | loss  7.55 | ppl  1906.820
+| epoch   4 step   244400 |   5271 batches | lr 0.000225 | ms/batch 2348.67 | loss  7.55 | ppl  1902.188
+| epoch   4 step   244600 |   5471 batches | lr 0.000225 | ms/batch 2349.90 | loss  7.55 | ppl  1901.566
+| epoch   4 step   244800 |   5671 batches | lr 0.000225 | ms/batch 2569.03 | loss  7.56 | ppl  1920.819
+| epoch   4 step   245000 |   5871 batches | lr 0.000225 | ms/batch 2355.87 | loss  7.56 | ppl  1915.573
+| epoch   4 step   245200 |   6071 batches | lr 0.000225 | ms/batch 2353.19 | loss  7.56 | ppl  1910.488
+| epoch   4 step   245400 |   6271 batches | lr 0.000225 | ms/batch 2567.85 | loss  7.55 | ppl  1906.972
+| epoch   4 step   245600 |   6471 batches | lr 0.000225 | ms/batch 2341.86 | loss  7.56 | ppl  1910.362
+| epoch   4 step   245800 |   6671 batches | lr 0.000225 | ms/batch 2348.91 | loss  7.56 | ppl  1912.247
+| epoch   4 step   246000 |   6871 batches | lr 0.000225 | ms/batch 2347.80 | loss  7.55 | ppl  1899.836
+| epoch   4 step   246200 |   7071 batches | lr 0.000225 | ms/batch 2542.00 | loss  7.56 | ppl  1918.789
+| epoch   4 step   246400 |   7271 batches | lr 0.000225 | ms/batch 2341.51 | loss  7.55 | ppl  1905.835
+| epoch   4 step   246600 |   7471 batches | lr 0.000225 | ms/batch 2345.90 | loss  7.55 | ppl  1902.470
+| epoch   4 step   246800 |   7671 batches | lr 0.000225 | ms/batch 2569.62 | loss  7.55 | ppl  1896.618
+| epoch   4 step   247000 |   7871 batches | lr 0.000225 | ms/batch 2348.15 | loss  7.56 | ppl  1917.519
+| epoch   4 step   247200 |   8071 batches | lr 0.000225 | ms/batch 2346.24 | loss  7.56 | ppl  1910.304
+| epoch   4 step   247400 |   8271 batches | lr 0.000225 | ms/batch 2575.17 | loss  7.55 | ppl  1901.832
+| epoch   4 step   247600 |   8471 batches | lr 0.000225 | ms/batch 2355.33 | loss  7.56 | ppl  1919.264
+| epoch   4 step   247800 |   8671 batches | lr 0.000225 | ms/batch 2346.81 | loss  7.55 | ppl  1901.219
+| epoch   4 step   248000 |   8871 batches | lr 0.000225 | ms/batch 2344.70 | loss  7.55 | ppl  1907.304
+----------------------------------------------------------------------------------------------------
+| Eval  62 at step   248000 | time: 10413.07s | valid loss  8.46 | valid ppl  4724.375
+----------------------------------------------------------------------------------------------------
+| epoch   4 step   248200 |   9071 batches | lr 0.000225 | ms/batch 6354.04 | loss  7.55 | ppl  1902.666
+| epoch   4 step   248400 |   9271 batches | lr 0.000224 | ms/batch 2322.16 | loss  7.55 | ppl  1904.808
+| epoch   4 step   248600 |   9471 batches | lr 0.000224 | ms/batch 2345.21 | loss  7.55 | ppl  1904.760
+| epoch   4 step   248800 |   9671 batches | lr 0.000224 | ms/batch 2570.05 | loss  7.55 | ppl  1891.687
+| epoch   4 step   249000 |   9871 batches | lr 0.000224 | ms/batch 2350.87 | loss  7.55 | ppl  1902.369
+| epoch   4 step   249200 |  10071 batches | lr 0.000224 | ms/batch 2347.68 | loss  7.56 | ppl  1913.567
+| epoch   4 step   249400 |  10271 batches | lr 0.000224 | ms/batch 2348.75 | loss  7.55 | ppl  1908.024
+| epoch   4 step   249600 |  10471 batches | lr 0.000224 | ms/batch 2589.68 | loss  7.55 | ppl  1907.386
+| epoch   4 step   249800 |  10671 batches | lr 0.000224 | ms/batch 2349.72 | loss  7.55 | ppl  1908.059
+| epoch   4 step   250000 |  10871 batches | lr 0.000224 | ms/batch 2343.47 | loss  7.55 | ppl  1897.744
+| epoch   4 step   250200 |  11071 batches | lr 0.000224 | ms/batch 2564.58 | loss  7.55 | ppl  1904.672
+| epoch   4 step   250400 |  11271 batches | lr 0.000224 | ms/batch 2350.04 | loss  7.56 | ppl  1917.717
+| epoch   4 step   250600 |  11471 batches | lr 0.000224 | ms/batch 2341.82 | loss  7.56 | ppl  1918.352
+| epoch   4 step   250800 |  11671 batches | lr 0.000224 | ms/batch 2553.65 | loss  7.55 | ppl  1909.785
+| epoch   4 step   251000 |  11871 batches | lr 0.000224 | ms/batch 2347.72 | loss  7.55 | ppl  1909.809
+| epoch   4 step   251200 |  12071 batches | lr 0.000224 | ms/batch 2349.23 | loss  7.56 | ppl  1915.341
+| epoch   4 step   251400 |  12271 batches | lr 0.000224 | ms/batch 2352.41 | loss  7.56 | ppl  1916.340
+| epoch   4 step   251600 |  12471 batches | lr 0.000224 | ms/batch 2573.62 | loss  7.55 | ppl  1902.119
+| epoch   4 step   251800 |  12671 batches | lr 0.000224 | ms/batch 2346.39 | loss  7.55 | ppl  1907.547
+| epoch   4 step   252000 |  12871 batches | lr 0.000224 | ms/batch 2358.17 | loss  7.56 | ppl  1919.159
+----------------------------------------------------------------------------------------------------
+| Eval  63 at step   252000 | time: 10422.26s | valid loss  8.46 | valid ppl  4736.977
+----------------------------------------------------------------------------------------------------
+| epoch   4 step   252200 |  13071 batches | lr 0.000224 | ms/batch 6437.84 | loss  7.55 | ppl  1909.360
+| epoch   4 step   252400 |  13271 batches | lr 0.000224 | ms/batch 2348.26 | loss  7.55 | ppl  1904.595
+| epoch   4 step   252600 |  13471 batches | lr 0.000224 | ms/batch 2349.29 | loss  7.56 | ppl  1912.298
+| epoch   4 step   252800 |  13671 batches | lr 0.000224 | ms/batch 2542.07 | loss  7.55 | ppl  1906.868
+| epoch   4 step   253000 |  13871 batches | lr 0.000224 | ms/batch 2341.74 | loss  7.56 | ppl  1912.065
+| epoch   4 step   253200 |  14071 batches | lr 0.000224 | ms/batch 2347.13 | loss  7.55 | ppl  1906.757
+| epoch   4 step   253400 |  14271 batches | lr 0.000223 | ms/batch 2354.13 | loss  7.56 | ppl  1918.974
+| epoch   4 step   253600 |  14471 batches | lr 0.000223 | ms/batch 2569.32 | loss  7.56 | ppl  1914.700
+| epoch   4 step   253800 |  14671 batches | lr 0.000223 | ms/batch 2346.32 | loss  7.55 | ppl  1904.120
+| epoch   4 step   254000 |  14871 batches | lr 0.000223 | ms/batch 2353.02 | loss  7.56 | ppl  1920.229
+| epoch   4 step   254200 |  15071 batches | lr 0.000223 | ms/batch 2584.89 | loss  7.56 | ppl  1922.545
+| epoch   4 step   254400 |  15271 batches | lr 0.000223 | ms/batch 2346.62 | loss  7.55 | ppl  1905.999
+| epoch   4 step   254600 |  15471 batches | lr 0.000223 | ms/batch 2348.72 | loss  7.56 | ppl  1915.896
+| epoch   4 step   254800 |  15671 batches | lr 0.000223 | ms/batch 2350.08 | loss  7.55 | ppl  1905.614
+| epoch   4 step   255000 |  15871 batches | lr 0.000223 | ms/batch 2575.36 | loss  7.55 | ppl  1907.181
+| epoch   4 step   255200 |  16071 batches | lr 0.000223 | ms/batch 2322.34 | loss  7.55 | ppl  1905.757
+| epoch   4 step   255400 |  16271 batches | lr 0.000223 | ms/batch 2340.83 | loss  7.55 | ppl  1906.732
+| epoch   4 step   255600 |  16471 batches | lr 0.000223 | ms/batch 2565.49 | loss  7.56 | ppl  1916.652
+| epoch   4 step   255800 |  16671 batches | lr 0.000223 | ms/batch 2349.37 | loss  7.56 | ppl  1915.563
+| epoch   4 step   256000 |  16871 batches | lr 0.000223 | ms/batch 2350.37 | loss  7.56 | ppl  1912.704
+----------------------------------------------------------------------------------------------------
+| Eval  64 at step   256000 | time: 10416.41s | valid loss  8.46 | valid ppl  4715.998
+----------------------------------------------------------------------------------------------------
+| epoch   4 step   256200 |  17071 batches | lr 0.000223 | ms/batch 6394.39 | loss  7.55 | ppl  1897.645
+| epoch   4 step   256400 |  17271 batches | lr 0.000223 | ms/batch 2347.09 | loss  7.56 | ppl  1912.089
+| epoch   4 step   256600 |  17471 batches | lr 0.000223 | ms/batch 2343.14 | loss  7.56 | ppl  1914.217
+| epoch   4 step   256800 |  17671 batches | lr 0.000223 | ms/batch 2345.97 | loss  7.56 | ppl  1924.692
+| epoch   4 step   257000 |  17871 batches | lr 0.000223 | ms/batch 2570.45 | loss  7.55 | ppl  1906.651
+| epoch   4 step   257200 |  18071 batches | lr 0.000223 | ms/batch 2339.84 | loss  7.56 | ppl  1911.359
+| epoch   4 step   257400 |  18271 batches | lr 0.000223 | ms/batch 2325.61 | loss  7.55 | ppl  1899.375
+| epoch   4 step   257600 |  18471 batches | lr 0.000223 | ms/batch 2571.99 | loss  7.55 | ppl  1909.633
+| epoch   4 step   257800 |  18671 batches | lr 0.000223 | ms/batch 2347.12 | loss  7.56 | ppl  1915.230
+| epoch   4 step   258000 |  18871 batches | lr 0.000223 | ms/batch 2349.91 | loss  7.56 | ppl  1913.651
+| epoch   4 step   258200 |  19071 batches | lr 0.000223 | ms/batch 2347.70 | loss  7.55 | ppl  1909.432
+| epoch   4 step   258400 |  19271 batches | lr 0.000222 | ms/batch 2567.29 | loss  7.56 | ppl  1919.755
+| epoch   4 step   258600 |  19471 batches | lr 0.000222 | ms/batch 2357.04 | loss  7.56 | ppl  1914.851
+| epoch   4 step   258800 |  19671 batches | lr 0.000222 | ms/batch 2350.96 | loss  7.55 | ppl  1909.491
+| epoch   4 step   259000 |  19871 batches | lr 0.000222 | ms/batch 2562.89 | loss  7.55 | ppl  1903.082
+| epoch   4 step   259200 |  20071 batches | lr 0.000222 | ms/batch 2347.53 | loss  7.56 | ppl  1920.529
+| epoch   4 step   259400 |  20271 batches | lr 0.000222 | ms/batch 2350.26 | loss  7.56 | ppl  1913.098
+| epoch   4 step   259600 |  20471 batches | lr 0.000222 | ms/batch 2570.52 | loss  7.56 | ppl  1916.189
+| epoch   4 step   259800 |  20671 batches | lr 0.000222 | ms/batch 2319.68 | loss  7.55 | ppl  1906.404
+| epoch   4 step   260000 |  20871 batches | lr 0.000222 | ms/batch 2347.77 | loss  7.56 | ppl  1917.392
+----------------------------------------------------------------------------------------------------
+| Eval  65 at step   260000 | time: 10418.81s | valid loss  8.45 | valid ppl  4696.969
+----------------------------------------------------------------------------------------------------
+| epoch   4 step   260200 |  21071 batches | lr 0.000222 | ms/batch 6212.25 | loss  7.55 | ppl  1894.340
+| epoch   4 step   260400 |  21271 batches | lr 0.000222 | ms/batch 2570.12 | loss  7.56 | ppl  1916.525
+| epoch   4 step   260600 |  21471 batches | lr 0.000222 | ms/batch 2353.86 | loss  7.56 | ppl  1910.582
+| epoch   4 step   260800 |  21671 batches | lr 0.000222 | ms/batch 2358.94 | loss  7.56 | ppl  1914.961
+| epoch   4 step   261000 |  21871 batches | lr 0.000222 | ms/batch 2567.14 | loss  7.56 | ppl  1915.395
+| epoch   4 step   261200 |  22071 batches | lr 0.000222 | ms/batch 2345.52 | loss  7.55 | ppl  1908.204
+| epoch   4 step   261400 |  22271 batches | lr 0.000222 | ms/batch 2347.83 | loss  7.56 | ppl  1918.360
+| epoch   4 step   261600 |  22471 batches | lr 0.000222 | ms/batch 2570.16 | loss  7.55 | ppl  1906.148
+| epoch   4 step   261800 |  22671 batches | lr 0.000222 | ms/batch 2323.30 | loss  7.56 | ppl  1916.417
+| epoch   4 step   262000 |  22871 batches | lr 0.000222 | ms/batch 2239.30 | loss  7.55 | ppl  1905.064
+| epoch   4 step   262200 |  23071 batches | lr 0.000222 | ms/batch 2223.21 | loss  7.56 | ppl  1924.115
+| epoch   4 step   262400 |  23271 batches | lr 0.000222 | ms/batch 2432.31 | loss  7.55 | ppl  1901.530
+| epoch   4 step   262600 |  23471 batches | lr 0.000222 | ms/batch 2223.27 | loss  7.56 | ppl  1917.126
+| epoch   4 step   262800 |  23671 batches | lr 0.000222 | ms/batch 2223.13 | loss  7.56 | ppl  1912.882
+| epoch   4 step   263000 |  23871 batches | lr 0.000222 | ms/batch 2437.99 | loss  7.56 | ppl  1912.002
+| epoch   4 step   263200 |  24071 batches | lr 0.000221 | ms/batch 2223.52 | loss  7.55 | ppl  1898.804
+| epoch   4 step   263400 |  24271 batches | lr 0.000221 | ms/batch 2223.58 | loss  7.55 | ppl  1907.454
+| epoch   4 step   263600 |  24471 batches | lr 0.000221 | ms/batch 2223.51 | loss  7.55 | ppl  1900.990
+| epoch   4 step   263800 |  24671 batches | lr 0.000221 | ms/batch 2439.64 | loss  7.55 | ppl  1904.764
+| epoch   4 step   264000 |  24871 batches | lr 0.000221 | ms/batch 2222.97 | loss  7.56 | ppl  1920.661
+----------------------------------------------------------------------------------------------------
+| Eval  66 at step   264000 | time: 10113.48s | valid loss  8.45 | valid ppl  4692.625
+----------------------------------------------------------------------------------------------------
+| epoch   4 step   264200 |  25071 batches | lr 0.000221 | ms/batch 5886.36 | loss  7.55 | ppl  1905.364
+| epoch   4 step   264400 |  25271 batches | lr 0.000221 | ms/batch 2443.60 | loss  7.55 | ppl  1904.307
+| epoch   4 step   264600 |  25471 batches | lr 0.000221 | ms/batch 2223.21 | loss  7.56 | ppl  1923.534
+| epoch   4 step   264800 |  25671 batches | lr 0.000221 | ms/batch 2223.96 | loss  7.55 | ppl  1905.098
+| epoch   4 step   265000 |  25871 batches | lr 0.000221 | ms/batch 2439.37 | loss  7.56 | ppl  1916.311
+| epoch   4 step   265200 |  26071 batches | lr 0.000221 | ms/batch 2223.48 | loss  7.55 | ppl  1904.301
+| epoch   4 step   265400 |  26271 batches | lr 0.000221 | ms/batch 2223.61 | loss  7.56 | ppl  1923.058
+| epoch   4 step   265600 |  26471 batches | lr 0.000221 | ms/batch 2223.17 | loss  7.56 | ppl  1914.713
+| epoch   4 step   265800 |  26671 batches | lr 0.000221 | ms/batch 2432.84 | loss  7.55 | ppl  1895.903
+| epoch   4 step   266000 |  26871 batches | lr 0.000221 | ms/batch 2223.42 | loss  7.55 | ppl  1903.631
+| epoch   4 step   266200 |  27071 batches | lr 0.000221 | ms/batch 2223.64 | loss  7.56 | ppl  1911.521
+| epoch   4 step   266400 |  27271 batches | lr 0.000221 | ms/batch 2442.49 | loss  7.56 | ppl  1912.495
+| epoch   4 step   266600 |  27471 batches | lr 0.000221 | ms/batch 2223.42 | loss  7.55 | ppl  1901.837
+slurmstepd: error: *** JOB 52159365 ON dgx03 CANCELLED AT 2020-05-01T13:34:47 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 52159365.0 ON dgx03 CANCELLED AT 2020-05-01T13:34:47 DUE TO TIME LIMIT ***
+/usr/bin/epilog: line 3: grep: command not found

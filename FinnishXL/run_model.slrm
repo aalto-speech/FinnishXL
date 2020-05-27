@@ -1,8 +1,8 @@
 #!/bin/bash -l
 
 #SBATCH -p dgx-spa
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:3
 #SBATCH --time=5-00:00:00
 #SBATCH --mem=30G
 
-srun bash /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/run_Ktrain_baseline_transformerxl_mem32chunked.sh train --work_dir=/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/
+srun bash /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/run_Ktrain_large_layers_72mem32chunked_multi_gpu.sh train --work_dir=/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/

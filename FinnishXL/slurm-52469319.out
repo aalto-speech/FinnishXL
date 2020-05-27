@@ -1,0 +1,21 @@
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+ERROR (theano.gpuarray): Could not initialize pygpu, support disabled
+Traceback (most recent call last):
+  File "/scratch/work/groszt1/envs/theanoLM/lib/python3.7/site-packages/theano/gpuarray/__init__.py", line 227, in <module>
+    use(config.device)
+  File "/scratch/work/groszt1/envs/theanoLM/lib/python3.7/site-packages/theano/gpuarray/__init__.py", line 214, in use
+    init_dev(device, preallocate=preallocate)
+  File "/scratch/work/groszt1/envs/theanoLM/lib/python3.7/site-packages/theano/gpuarray/__init__.py", line 99, in init_dev
+    **args)
+  File "pygpu/gpuarray.pyx", line 658, in pygpu.gpuarray.init
+  File "pygpu/gpuarray.pyx", line 587, in pygpu.gpuarray.pygpu_init
+pygpu.gpuarray.GpuArrayException: b'cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected'
+/scratch/work/groszt1/envs/theanoLM/lib/python3.7/site-packages/h5py-2.9.0-py3.7-linux-x86_64.egg/h5py/_hl/dataset.py:313: H5pyDeprecationWarning: dataset.value has been deprecated. Use dataset[()] instead.
+  "Use dataset[()] instead.", H5pyDeprecationWarning)
+/scratch/work/groszt1/envs/theanoLM/lib/python3.7/site-packages/h5py-2.9.0-py3.7-linux-x86_64.egg/h5py/_hl/dataset.py:313: H5pyDeprecationWarning: dataset.value has been deprecated. Use dataset[()] instead.
+  "Use dataset[()] instead.", H5pyDeprecationWarning)
+/scratch/work/groszt1/envs/theanoLM/lib/python3.7/site-packages/theano/tensor/subtensor.py:2339: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  out[0][inputs[2:]] = inputs[1]
+/scratch/work/groszt1/envs/theanoLM/lib/python3.7/site-packages/theano/tensor/subtensor.py:2197: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
+  rval = inputs[0].__getitem__(inputs[1:])
+/usr/bin/epilog: line 3: grep: command not found

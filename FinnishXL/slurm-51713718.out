@@ -1,0 +1,105 @@
+Run training...
+Experiment dir : /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200409-143502
+Loading cached dataset...
+====================================================================================================
+    - data : /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/fin_Data/
+    - dataset : Ktrain
+    - n_layer : 24
+    - n_head : 16
+    - d_head : 80
+    - d_embed : 1280
+    - d_model : 1280
+    - d_inner : 8192
+    - dropout : 0.05
+    - dropatt : 0.05
+    - init : normal
+    - emb_init : normal
+    - init_range : 0.1
+    - emb_init_range : 0.01
+    - init_std : 0.02
+    - proj_init_std : 0.01
+    - optim : adam
+    - lr : 0.00025
+    - mom : 0.0
+    - scheduler : cosine
+    - warmup_step : 30000
+    - decay_rate : 0.5
+    - lr_min : 0.0
+    - clip : 0.25
+    - clip_nonemb : False
+    - max_step : 1200000
+    - batch_size : 512
+    - batch_chunk : 2
+    - tgt_len : 32
+    - eval_tgt_len : 32
+    - ext_len : 0
+    - mem_len : 32
+    - not_tied : False
+    - seed : 1111
+    - cuda : True
+    - adaptive : False
+    - div_val : 1
+    - pre_lnorm : False
+    - varlen : False
+    - multi_gpu : True
+    - log_interval : 200
+    - eval_interval : 4000
+    - work_dir : /scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200409-143502
+    - restart : False
+    - restart_dir : 
+    - debug : False
+    - same_length : False
+    - attn_type : 0
+    - clamp_len : -1
+    - eta_min : 0.0
+    - gpu0_bsz : 0
+    - max_eval_steps : -1
+    - sample_softmax : -1
+    - patience : 0
+    - finetune_v2 : False
+    - finetune_v3 : False
+    - fp16 : False
+    - static_loss_scale : 1
+    - dynamic_loss_scale : False
+    - tied : True
+    - n_token : 35940
+    - n_all_param : 746316388
+    - n_nonemb_param : 700274688
+====================================================================================================
+#params = 746316388
+#non emb params = 700274688
+Traceback (most recent call last):
+  File "train_kiel_train_schedule_restart.py", line 561, in <module>
+    train()
+  File "train_kiel_train_schedule_restart.py", line 453, in train
+    ret = para_model(data_i, target_i, *mems[i])
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/utils/data_parallel.py", line 70, in forward
+    outputs = self.parallel_apply(replicas, device_ids, inputs, kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/utils/data_parallel.py", line 74, in parallel_apply
+    return parallel_apply(replicas, inputs, kwargs, device_ids)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/parallel/parallel_apply.py", line 83, in parallel_apply
+    raise output
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/parallel/parallel_apply.py", line 59, in _worker
+    output = module(*input, **kwargs)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 745, in forward
+    hidden, new_mems = self._forward(data, mems=mems)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 677, in _forward
+    self.r_r_bias, dec_attn_mask=dec_attn_mask, mems=mems_i)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 427, in forward
+    mems=mems)
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/mem_transformer.py", line 253, in forward
+    BD = torch.einsum('ibnd,jnd->ijbn', (rr_head_q, r_head_k))              # qlen x klen x bsz x n_head
+  File "/share/apps2/anaconda/anaconda3/latest/lib/python3.6/site-packages/torch/functional.py", line 245, in einsum
+    return torch._C._VariableFunctions.einsum(equation, operands)
+RuntimeError: CUDA out of memory. Tried to allocate 16.00 MiB (GPU 1; 31.72 GiB total capacity; 30.37 GiB already allocated; 11.88 MiB free; 190.89 MiB cached)
+srun: error: dgx03: task 0: Exited with exit code 1
+srun: Terminating job step 51713718.0
+/usr/bin/epilog: line 3: grep: command not found

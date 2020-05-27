@@ -30,7 +30,7 @@ parser.add_argument('--clamp_len', type=int, default=-1,
                     help='max positional embedding index')
 parser.add_argument('--cuda', action='store_true',
                     help='use CUDA')
-parser.add_argument('--work_dir', type=str,default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20190717-Testing/',
+parser.add_argument('--work_dir', type=str,default='/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/-Ktrain/20200407-201955/',
                     help='path to the work_dir')
 parser.add_argument('--no_log', action='store_true',
                     help='do not log the eval result')
@@ -48,7 +48,7 @@ logging = get_logger(os.path.join(args.work_dir, 'log.txt'),
 # Load dataset
 #corpus = get_lm_corpus(args.data, args.dataset)
 
-corpus=get_lm_corpus('/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_train2/','Ktrain')
+corpus=get_lm_corpus('/m/triton/scratch/elec/puhe/p/jaina5/transformer-xl/FinnishXL/data/kiel_train/','Ktrain')
 ntokens = len(corpus.vocab)
 
 # va_iter = corpus.get_iterator('valid', args.batch_size, args.tgt_len,
@@ -65,7 +65,7 @@ model = model.to(device)
 logging('Evaluating with bsz {} tgt_len {} ext_len {} mem_len {} clamp_len {}'.format(
        args.batch_size, args.tgt_len, args.ext_len, args.mem_len, args.clamp_len))
 
-model.reset_length(args.tgt_len, args.ext_len, args.mem_len)
+#model.reset_length(args.tgt_len, args.ext_len, args.mem_len)
 if args.clamp_len > 0:
     model.clamp_len = args.clamp_len
 if args.same_length:

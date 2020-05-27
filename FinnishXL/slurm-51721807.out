@@ -1,0 +1,4 @@
+Run training...
+slurmstepd: error: *** STEP 51721807.0 ON dgx03 CANCELLED AT 2020-04-10T13:23:23 ***
+slurmstepd: error: *** JOB 51721807 ON dgx03 CANCELLED AT 2020-04-10T13:23:23 ***
+/usr/bin/epilog: line 3: grep: command not found
