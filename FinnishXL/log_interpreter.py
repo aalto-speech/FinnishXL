@@ -1,3 +1,4 @@
+#%%
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -98,3 +99,5 @@ locs, labels = plt.yticks()
 #print(locs,labels)
 plt.show()
 #sns.lineplot(epochs,training_loss)
+
+plt.savefig('test_train_plot.png')
